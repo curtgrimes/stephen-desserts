@@ -1,4 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperClass from "swiper";
 import { useDesserts } from "hooks/useDesserts";
 import "swiper/css";
 import DessertCard from "components/DessertCard";
@@ -13,7 +14,7 @@ import DessertCard from "components/DessertCard";
 
 const initialSlide = 0;
 
-const onSlideChange = ({ activeIndex }: SwiperType) => {
+const onSlideChange = ({ activeIndex }: SwiperClass) => {
   console.log("changed!");
 };
 
