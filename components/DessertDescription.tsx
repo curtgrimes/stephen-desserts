@@ -1,6 +1,9 @@
 import { Dessert } from "interfaces";
 import { useRouter } from "next/dist/client/router";
+import Note from "./Note";
 import Link from "next/link";
+import { CgSmartHomeRefrigerator as RefrigeratorIcon } from "react-icons/cg";
+import { BsSuitHeartFill as HeartIcon } from "react-icons/bs";
 
 export default function DessertDescription({ dessert }: { dessert: Dessert }) {
   const router = useRouter();
@@ -11,7 +14,13 @@ export default function DessertDescription({ dessert }: { dessert: Dessert }) {
         <h1>{dessert.name}</h1>
         <p>{dessert.description}</p>
 
-        {/* <Note v-if="dessert.refrigerationRecommended">Refrigeration recommended</Note> */}
+        {dessert.refrigerationRecommended && (
+          <Note icon={RefrigeratorIcon}>Refrigeration recommended</Note>
+        )}
+
+        {dessert.stephensFavorite && (
+          <Note icon={HeartIcon}>Stephen&apos;s personal favorite</Note>
+        )}
       </div>
       <Link href={`/${router.query.year}/${router.query.dessertSlug}/recipe`}>
         <a className="button">View Recipe</a>

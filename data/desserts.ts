@@ -14,6 +14,7 @@ const desserts = {
           slug: "chocolate-pretzel-rice-crispy",
           description: chance.paragraph({ sentences: 2 }),
           refrigerationRecommended: true,
+          stephensFavorite: true,
           recipe: `
 ## This is my heading
 
@@ -34,6 +35,7 @@ Some more text
           slug: "my-second-dessert",
           description: chance.paragraph({ sentences: 2 }),
           refrigerationRecommended: false,
+          stephensFavorite: false,
         },
       ],
     },

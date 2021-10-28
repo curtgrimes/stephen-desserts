@@ -3,5 +3,6 @@ export interface Dessert {
   slug: string;
   description: string;
   refrigerationRecommended: boolean;
+  stephensFavorite: boolean;
   recipe?: string;
 }
