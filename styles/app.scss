@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;900&display=swap");
+
+body {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  @apply bg-amber-100;
+}
+
+h1 {
+  @apply font-black text-xl mb-2;
+}
+
+p {
+  @apply mb-5;
+}
+
+.button {
+  @apply block bg-red-300 px-2 pt-3 pb-4 flex items-center justify-center font-bold rounded-lg bg-amber-100 border border-amber-200;
+}
+
+table {
+  @apply w-full text-left border px-2 py-1 bg-white rounded;
+}
