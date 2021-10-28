@@ -53,7 +53,7 @@ export default function Dessert3DView({ dessert }: { dessert: Dessert }) {
   }, [isVisible]);
 
   return (
-    <div className="h-3/8 rounded-t-3xl">
+    <div className="h-1/3 rounded-t-3xl">
       <div
         ref={the3dview}
         className={`swiper-no-swiping h-full transition-opacity delay-100 duration-300 ${

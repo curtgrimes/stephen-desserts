@@ -2,7 +2,7 @@
   <div class="fixed inset-0 bg-white z-10 filter backdrop-filter backdrop-blur-sm bg-opacity-70 p-8">
     <div class="flex justify-start mb-5">
       <NuxtLink to="/2021">
-        <ArrowLeftIcon class="w-10 h-10 text-amber-600" />
+        <ArrowLeftIcon class="w-10 h-10 text-yellow-600" />
       </NuxtLink>
     </div>
     <h1 class="text-3xl">{{dessert.name}}</h1>

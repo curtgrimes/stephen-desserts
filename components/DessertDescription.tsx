@@ -6,7 +6,7 @@ export default function DessertDescription({ dessert }: { dessert: Dessert }) {
   const router = useRouter();
 
   return (
-    <div className="bg-white p-7 h-5/8 flex-grow-1 text-amber-600 rounded-b-3xl overflow-y-auto flex flex-col">
+    <div className="bg-white p-7 h-2/3 flex-grow-1 text-yellow-600 rounded-b-3xl overflow-y-auto flex flex-col">
       <div className="mb-auto">
         <h1>{dessert.name}</h1>
         <p>{dessert.description}</p>
