@@ -28,6 +28,6 @@
     "swiper": "^7.1.0",
     "three": "^0.133.1",
     "typescript": "^4.4.4",
-    "windicss-webpack-plugin": "^1.5.3"
+    "windicss-webpack-plugin": "^1.5.5"
   }
 }
