@@ -4,7 +4,7 @@ import { useDidMount, useWillUnmount } from "rooks";
 import { DessertRenderer } from "./DessertRenderer";
 import React from "react";
 
-function Dessert3DView({
+export default function Dessert3DView({
   dessert,
   doInitialSpin = true,
 }: {
@@ -60,5 +60,3 @@ function Dessert3DView({
     ></div>
   );
 }
-
-export default React.memo(Dessert3DView);
