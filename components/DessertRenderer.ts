@@ -1,4 +1,12 @@
-import * as THREE from "three";
+import {
+  WebGLRenderer,
+  Scene,
+  PerspectiveCamera,
+  Group,
+  sRGBEncoding,
+  PMREMGenerator,
+  MathUtils,
+} from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { RoomEnvironment } from "three/examples/jsm/environments/RoomEnvironment.js";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
@@ -9,11 +17,11 @@ export class DessertRenderer {
   private modelPath: string;
   private elementRef: MutableRefObject<HTMLElement>;
 
-  private renderer: THREE.WebGLRenderer;
-  private scene: THREE.Scene;
-  private camera: THREE.PerspectiveCamera;
+  private renderer: WebGLRenderer;
+  private scene: Scene;
+  private camera: PerspectiveCamera;
   private controls: OrbitControls;
-  private model: THREE.Group;
+  private model: Group;
 
   private paused: boolean = false;
   public initialized: boolean = false;
@@ -44,18 +52,18 @@ export class DessertRenderer {
   }
 
   private initializeRenderer() {
-    this.renderer = new THREE.WebGLRenderer({
+    this.renderer = new WebGLRenderer({
       antialias: true,
       alpha: true,
     });
-    this.renderer.outputEncoding = THREE.sRGBEncoding;
+    this.renderer.outputEncoding = sRGBEncoding;
   }
 
   private initializeScene() {
-    this.scene = new THREE.Scene();
+    this.scene = new Scene();
     this.scene.background = null;
 
-    const pmremGenerator = new THREE.PMREMGenerator(this.renderer);
+    const pmremGenerator = new PMREMGenerator(this.renderer);
     this.scene.environment = pmremGenerator.fromScene(
       new RoomEnvironment(),
       0.04
@@ -63,7 +71,7 @@ export class DessertRenderer {
   }
 
   private initializeCamera() {
-    this.camera = new THREE.PerspectiveCamera(50, 1, 1, 100);
+    this.camera = new PerspectiveCamera(50, 1, 1, 100);
     this.camera.position.set(5, 2, 8);
   }
 
@@ -142,11 +150,15 @@ export class DessertRenderer {
       this.camera.fov = fov;
     } else {
       // window too narrow
-      const cameraHeight = Math.tan(THREE.MathUtils.degToRad(fov / 2));
+      const cameraHeight = Math.tan(MathUtils.degToRad(fov / 2));
       const ratio = this.camera.aspect / planeAspectRatio;
       const newCameraHeight = cameraHeight / ratio;
-      this.camera.fov =
-        THREE.MathUtils.radToDeg(Math.atan(newCameraHeight)) * 2;
+      this.camera.fov = MathUtils.radToDeg(Math.atan(newCameraHeight)) * 2;
+    }
+
+    if (!this.elementRef.current) {
+      this.pause();
+      return;
     }
 
     const { width, height } = this.elementRef.current.getBoundingClientRect();

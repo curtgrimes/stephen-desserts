@@ -13,7 +13,9 @@ export default function DessertCard({ dessert }: { dessert: Dessert }) {
             <GridIcon className="w-8 h-8 text-yellow-600" />
           </a>
         </Link>
-        <Dessert3DView dessert={dessert} />
+        <div className="h-1/3">
+          <Dessert3DView dessert={dessert} />
+        </div>
         <DessertDescription dessert={dessert} />
       </div>
     </div>

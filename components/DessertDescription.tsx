@@ -3,7 +3,7 @@ import { useRouter } from "next/dist/client/router";
 import Note from "./Note";
 import Link from "next/link";
 import { CgSmartHomeRefrigerator as RefrigeratorIcon } from "react-icons/cg";
-import { BsSuitHeartFill as HeartIcon } from "react-icons/bs";
+import { FaHeart as HeartIcon } from "react-icons/fa";
 
 export default function DessertDescription({ dessert }: { dessert: Dessert }) {
   const router = useRouter();

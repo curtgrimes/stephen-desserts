@@ -1,8 +1,10 @@
-import DessertSwiper from "components/DessertSwiper";
-
 // import { useRoute, useRouter } from "vue-router";
 // const router = useRouter();
 // const route = useRoute();
+
+import DessertCardMini from "components/DessertCardMini";
+import { useDesserts } from "hooks/useDesserts";
+import { useRouter } from "next/router";
 
 // const desserts = useDesserts({ year: route.params.year as string });
 
@@ -18,9 +20,14 @@ import DessertSwiper from "components/DessertSwiper";
 // };
 
 export default function YearPage() {
+  const router = useRouter();
+  const { desserts } = useDesserts(router.query.year as string);
+
   return (
-    <div>
-      <DessertSwiper />
+    <div className="grid grid-cols-2 gap-4 m-4">
+      {desserts.map((dessert) => (
+        <DessertCardMini dessert={dessert} key={dessert.slug} />
+      ))}
     </div>
   );
 }
