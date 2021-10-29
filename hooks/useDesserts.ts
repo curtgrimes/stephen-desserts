@@ -1,17 +1,28 @@
 import desserts from "data/desserts";
 import { Dessert } from "interfaces";
+import { useRouter } from "next/router";
 
-interface useDessertOptions {
-  year: string;
-  dessertSlug?: string;
+interface UseDessertsResponse {
+  desserts: Dessert[];
+  loading: boolean;
 }
 
-export function useDesserts(year: string): Dessert[] {
-  return desserts.years[year]?.desserts;
+interface UseDessertResponse {
+  dessert: Dessert;
+  loading: boolean;
 }
 
-export function useDessert({ year, dessertSlug }: useDessertOptions) {
-  return useDesserts(year)?.find(
-    (dessert: Dessert) => dessert.slug === dessertSlug
-  );
+export function useDesserts(year: string): UseDessertsResponse {
+  return { desserts: desserts.years[year]?.desserts || [], loading: false };
+}
+
+export function useDessert(): UseDessertResponse {
+  const router = useRouter();
+
+  return {
+    dessert: useDesserts(router.query.year as string).desserts.find(
+      (dessert: Dessert) => dessert.slug === router.query.dessertSlug
+    ),
+    loading: !router.isReady,
+  };
 }

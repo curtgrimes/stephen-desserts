@@ -24,10 +24,16 @@ My recipe hello world
 
 Some more text
 
-| A Table | Example |
-| --- | ----------- |
-| Header | Title |
-| Paragraph | Text |
+* Lists
+* [ ] todo
+* [x] done
+
+A table:
+
+| a | b |
+| - | - |
+| a | b |
+| a | b |
           `,
         },
         {
