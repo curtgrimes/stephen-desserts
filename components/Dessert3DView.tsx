@@ -8,7 +8,7 @@ export default function Dessert3DView({
   doInitialSpin = true,
 }: {
   dessert: Dessert;
-  doInitialSpin: boolean;
+  doInitialSpin?: boolean;
 }) {
   const [isVisible, setIsVisible] = useState(false);
   const the3dview = useRef(null);
