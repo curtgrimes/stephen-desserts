@@ -8,7 +8,7 @@ export default function Dessert3DView({ dessert }: { dessert: Dessert }) {
   const the3dview = useRef(null);
   const dessertRender = useRef(
     new DessertRenderer(
-      "/models/2021/chocolate-pretzel-rice-crispy.gltf",
+      "/static/models/2021/chocolate-pretzel-rice-crispy.gltf",
       the3dview
     )
   );
