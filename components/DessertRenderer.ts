@@ -13,13 +13,14 @@ import { RoomEnvironment } from "three/examples/jsm/environments/RoomEnvironment
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader.js";
 import { MutableRefObject } from "react";
+import { Dessert } from "interfaces";
 
 interface DessertRendererOptions {
   doInitialSpin?: boolean;
 }
 
 export class DessertRenderer {
-  private modelPath: string;
+  private dessert: Dessert;
   private elementRef: MutableRefObject<HTMLElement>;
 
   private renderer: WebGLRenderer;
@@ -35,11 +36,11 @@ export class DessertRenderer {
   private doInitialSpin: boolean = true;
 
   constructor(
-    modelPath: string,
+    dessert: Dessert,
     elementRef: MutableRefObject<HTMLElement>,
     options: DessertRendererOptions = {}
   ) {
-    this.modelPath = modelPath;
+    this.dessert = dessert;
     this.elementRef = elementRef;
     this.doInitialSpin = options.doInitialSpin;
   }
@@ -126,12 +127,18 @@ export class DessertRenderer {
       DessertRenderer.loader.setDRACOLoader(dracoLoader);
     }
 
-    const gltf = await DessertRenderer.loader.loadAsync(this.modelPath);
+    const gltf = await DessertRenderer.loader.loadAsync(
+      this.dessert.model.path
+    );
     this.model = gltf.scene;
-    this.model.scale.set(0.1, 0.1, 0.1);
-    this.model.rotateX(0.4);
-    this.model.rotateY(3);
-    this.model.rotateZ(0.4);
+    this.model.scale.set(
+      this.dessert.model.scale,
+      this.dessert.model.scale,
+      this.dessert.model.scale
+    );
+    this.model.rotateX(this.dessert.model.rotation.x);
+    this.model.rotateY(this.dessert.model.rotation.y);
+    this.model.rotateZ(this.dessert.model.rotation.z);
     this.scene.add(this.model);
 
     if (this.doInitialSpin) {

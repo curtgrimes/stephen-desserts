@@ -2,6 +2,7 @@
 // recipe
 
 import * as chanceImport from "chance";
+import { Dessert } from "interfaces";
 const { Chance } = chanceImport;
 const chance = Chance("seed-12345");
 
@@ -13,7 +14,15 @@ const desserts = {
           name: "Chocolate Pretzel Rice Crispy",
           slug: "chocolate-pretzel-rice-crispy",
           description: chance.paragraph({ sentences: 2 }),
-          modelPath: "/static/models/2021/chocolate-pretzel-rice-crispy.gltf",
+          model: {
+            path: "/static/models/2021/chocolate-pretzel-rice-crispy.gltf",
+            scale: 0.1,
+            rotation: {
+              x: 0.4,
+              y: 3,
+              z: 0.4,
+            },
+          },
           refrigerationRecommended: true,
           stephensFavorite: true,
           recipe: `
@@ -38,14 +47,22 @@ A table:
           `,
         },
         {
-          name: "My second dessert",
-          slug: "my-second-dessert",
+          name: "Death by Chocolate Peppermint Cookie",
+          slug: "death-by-chocolate-peppermint-cookie",
           description: chance.paragraph({ sentences: 2 }),
-          modelPath: "/static/models/2021/chocolate-pretzel-rice-crispy.gltf",
+          model: {
+            path: "/static/models/2021/death-by-chocolate-peppermint-cookie.gltf",
+            scale: 1,
+            rotation: {
+              x: 0.4,
+              y: 3,
+              z: 0.4,
+            },
+          },
           refrigerationRecommended: false,
           stephensFavorite: false,
         },
-      ],
+      ] as Dessert[],
     },
   },
 };

@@ -14,7 +14,7 @@ export default function Dessert3DView({
   const [isVisible, setIsVisible] = useState(false);
   const container = useRef(null);
   const dessertRender = useRef(
-    new DessertRenderer(dessert.modelPath, container, {
+    new DessertRenderer(dessert, container, {
       doInitialSpin,
     })
   );
