@@ -22,9 +22,11 @@ export default function DessertDescription({ dessert }: { dessert: Dessert }) {
           <Note icon={HeartIcon}>Stephen&apos;s personal favorite</Note>
         )}
       </div>
-      <Link href={`/${router.query.year}/${router.query.dessertSlug}/recipe`}>
-        <a className="button">View Recipe</a>
-      </Link>
+      {dessert.recipe && (
+        <Link href={`/${router.query.year}/${router.query.dessertSlug}/recipe`}>
+          <a className="button">View Recipe</a>
+        </Link>
+      )}
     </div>
   );
 }
