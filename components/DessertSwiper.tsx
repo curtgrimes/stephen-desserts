@@ -5,16 +5,6 @@ import "swiper/css";
 import DessertCard from "components/DessertCard";
 import { useRouter } from "next/router";
 
-// const initialSlide = computed(() =>
-//   props.initialDessertSlug
-//     ? props.desserts.findIndex(
-//         (dessert) => dessert.slug === props.initialDessertSlug
-//       )
-//     : 0
-// );
-
-const initialSlide = 0;
-
 export default function DessertSwiper() {
   const router = useRouter();
   const { desserts } = useDesserts(router.query.year as string);
@@ -23,13 +13,20 @@ export default function DessertSwiper() {
     router.replace(`/${router.query.year}/${desserts[activeIndex].slug}`);
   };
 
+  const initialSlide = () =>
+    router.query.dessertSlug
+      ? desserts.findIndex(
+          (dessert) => dessert.slug === router.query.dessertSlug
+        )
+      : 0;
+
   return (
     <div className="h-screen flex">
       <Swiper
         slidesPerView={1}
         spaceBetween={50}
         onSlideChange={onSlideChange}
-        initialSlide={initialSlide}
+        initialSlide={initialSlide()}
       >
         {desserts.map((dessert) => (
           <SwiperSlide key={dessert.slug}>
