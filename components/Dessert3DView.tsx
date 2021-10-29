@@ -1,9 +1,10 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useMemo } from "react";
 import { Dessert } from "interfaces";
 import { useDidMount, useWillUnmount } from "rooks";
 import { DessertRenderer } from "./DessertRenderer";
+import React from "react";
 
-export default function Dessert3DView({
+function Dessert3DView({
   dessert,
   doInitialSpin = true,
 }: {
@@ -11,15 +12,11 @@ export default function Dessert3DView({
   doInitialSpin?: boolean;
 }) {
   const [isVisible, setIsVisible] = useState(false);
-  const the3dview = useRef(null);
+  const container = useRef(null);
   const dessertRender = useRef(
-    new DessertRenderer(
-      "/static/models/2021/chocolate-pretzel-rice-crispy.gltf",
-      the3dview,
-      {
-        doInitialSpin,
-      }
-    )
+    new DessertRenderer(dessert.modelPath, container, {
+      doInitialSpin,
+    })
   );
 
   const resizeObserver = new ResizeObserver(() =>
@@ -36,13 +33,14 @@ export default function Dessert3DView({
   useDidMount(() => {
     dessertRender.current.render();
 
-    resizeObserver.observe(the3dview.current, { box: "content-box" });
-    intersectionObserver.observe(the3dview.current);
+    resizeObserver.observe(container.current, { box: "content-box" });
+    intersectionObserver.observe(container.current);
   });
 
   useWillUnmount(() => {
     resizeObserver.disconnect();
     intersectionObserver.disconnect();
+    dessertRender.current.destroy();
   });
 
   useEffect(() => {
@@ -55,10 +53,12 @@ export default function Dessert3DView({
 
   return (
     <div
-      ref={the3dview}
+      ref={container}
       className={`swiper-no-swiping h-full transition-opacity delay-100 duration-300 ${
         isVisible ? "opacity-100" : "opacity-0"
       }`}
     ></div>
   );
 }
+
+export default React.memo(Dessert3DView);

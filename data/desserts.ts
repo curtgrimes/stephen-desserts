@@ -13,6 +13,7 @@ const desserts = {
           name: "Chocolate Pretzel Rice Crispy",
           slug: "chocolate-pretzel-rice-crispy",
           description: chance.paragraph({ sentences: 2 }),
+          modelPath: "/static/models/2021/chocolate-pretzel-rice-crispy.gltf",
           refrigerationRecommended: true,
           stephensFavorite: true,
           recipe: `
@@ -40,6 +41,7 @@ A table:
           name: "My second dessert",
           slug: "my-second-dessert",
           description: chance.paragraph({ sentences: 2 }),
+          modelPath: "/static/models/2021/chocolate-pretzel-rice-crispy.gltf",
           refrigerationRecommended: false,
           stephensFavorite: false,
         },

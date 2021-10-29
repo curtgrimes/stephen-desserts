@@ -65,6 +65,13 @@ export class DessertRenderer {
     this.updateCanvasSize({ force: true });
   }
 
+  destroy() {
+    this.pause();
+    this.renderer.dispose();
+    this.renderer.forceContextLoss();
+    this.renderer = null;
+  }
+
   private initializeRenderer() {
     Cache.enabled = true;
     this.renderer = new WebGLRenderer({
