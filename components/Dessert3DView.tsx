@@ -21,7 +21,7 @@ export default function Dessert3DView({ dessert }: { dessert: Dessert }) {
     (entries) => {
       setIsVisible(entries?.[0]?.isIntersecting);
     },
-    { threshold: 0.5 }
+    { threshold: 0 }
   );
 
   useDidMount(() => {
@@ -48,7 +48,7 @@ export default function Dessert3DView({ dessert }: { dessert: Dessert }) {
     <div
       ref={the3dview}
       className={`swiper-no-swiping h-full transition-opacity delay-100 duration-300 ${
-        true ? "opacity-100" : "opacity-0"
+        isVisible ? "opacity-100" : "opacity-0"
       }`}
     ></div>
   );
