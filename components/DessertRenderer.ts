@@ -52,9 +52,10 @@ export class DessertRenderer {
     }
 
     this.initializeRenderer();
-    this.initializeScene();
+
     this.initializeCamera();
     this.initializeControls();
+    this.initializeScene();
     this.loadModel();
     this.mountRenderer();
 
@@ -69,6 +70,9 @@ export class DessertRenderer {
     this.renderer = new WebGLRenderer({
       antialias: true,
       alpha: true,
+
+      // https://attackingpixels.com/tips-tricks-optimizing-three-js-performance/
+      powerPreference: "high-performance",
     });
     this.renderer.outputEncoding = sRGBEncoding;
   }
@@ -105,15 +109,17 @@ export class DessertRenderer {
     this.controls.maxPolarAngle = 2;
   }
 
+  static loader: GLTFLoader;
   private async loadModel() {
-    const dracoLoader = new DRACOLoader();
-    dracoLoader.setDecoderConfig({ type: "js" });
-    dracoLoader.setDecoderPath("https://www.gstatic.com/draco/v1/decoders/");
+    if (!DessertRenderer.loader) {
+      const dracoLoader = new DRACOLoader();
+      dracoLoader.setDecoderConfig({ type: "js" });
+      dracoLoader.setDecoderPath("https://www.gstatic.com/draco/v1/decoders/");
+      DessertRenderer.loader = new GLTFLoader();
+      DessertRenderer.loader.setDRACOLoader(dracoLoader);
+    }
 
-    const loader = new GLTFLoader();
-    loader.setDRACOLoader(dracoLoader);
-
-    const gltf = await loader.loadAsync(this.modelPath);
+    const gltf = await DessertRenderer.loader.loadAsync(this.modelPath);
     this.model = gltf.scene;
     this.model.scale.set(0.1, 0.1, 0.1);
     this.model.rotateX(0.4);
