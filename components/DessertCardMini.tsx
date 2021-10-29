@@ -11,7 +11,7 @@ export default function DessertCardMini({ dessert }: { dessert: Dessert }) {
     <div className="bg-white rounded-xl shadow-lg">
       <Link href={`/${router.query.year}/${dessert.slug}`}>
         <a>
-          <Dessert3DView dessert={dessert} />
+          <Dessert3DView dessert={dessert} doInitialSpin={false} />
         </a>
       </Link>
     </div>

@@ -13,6 +13,10 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader.js";
 import { MutableRefObject } from "react";
 
+interface DessertRendererOptions {
+  doInitialSpin?: boolean;
+}
+
 export class DessertRenderer {
   private modelPath: string;
   private elementRef: MutableRefObject<HTMLElement>;
@@ -23,12 +27,20 @@ export class DessertRenderer {
   private controls: OrbitControls;
   private model: Group;
 
-  private paused: boolean = false;
-  public initialized: boolean = false;
+  private autoRotateSpeed = 3;
 
-  constructor(modelPath: string, elementRef: MutableRefObject<HTMLElement>) {
+  public initialized: boolean = false;
+  private paused: boolean = false;
+  private doInitialSpin: boolean = true;
+
+  constructor(
+    modelPath: string,
+    elementRef: MutableRefObject<HTMLElement>,
+    options: DessertRendererOptions = {}
+  ) {
     this.modelPath = modelPath;
     this.elementRef = elementRef;
+    this.doInitialSpin = options.doInitialSpin;
   }
 
   render() {
@@ -84,7 +96,9 @@ export class DessertRenderer {
     this.controls.enableDamping = true;
     this.controls.enableZoom = true;
     this.controls.autoRotate = true;
-    this.controls.autoRotateSpeed = 160;
+    this.controls.autoRotateSpeed = this.doInitialSpin
+      ? 160
+      : this.autoRotateSpeed;
     this.controls.minPolarAngle = 1;
     this.controls.maxPolarAngle = 2;
   }
@@ -105,9 +119,12 @@ export class DessertRenderer {
     this.model.rotateZ(0.4);
     this.scene.add(this.model);
 
-    setTimeout(() => {
-      this.controls.autoRotateSpeed = 3;
-    }, 150);
+    if (this.doInitialSpin) {
+      // We were already spinning faster at start. Now slow down.
+      setTimeout(() => {
+        this.controls.autoRotateSpeed = this.autoRotateSpeed;
+      }, 150);
+    }
   }
 
   private animate() {

@@ -3,13 +3,22 @@ import { Dessert } from "interfaces";
 import { useDidMount, useWillUnmount } from "rooks";
 import { DessertRenderer } from "./DessertRenderer";
 
-export default function Dessert3DView({ dessert }: { dessert: Dessert }) {
+export default function Dessert3DView({
+  dessert,
+  doInitialSpin = true,
+}: {
+  dessert: Dessert;
+  doInitialSpin: boolean;
+}) {
   const [isVisible, setIsVisible] = useState(false);
   const the3dview = useRef(null);
   const dessertRender = useRef(
     new DessertRenderer(
       "/static/models/2021/chocolate-pretzel-rice-crispy.gltf",
-      the3dview
+      the3dview,
+      {
+        doInitialSpin,
+      }
     )
   );
 
