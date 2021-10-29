@@ -6,6 +6,7 @@ import {
   sRGBEncoding,
   PMREMGenerator,
   MathUtils,
+  Cache,
 } from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { RoomEnvironment } from "three/examples/jsm/environments/RoomEnvironment.js";
@@ -64,6 +65,7 @@ export class DessertRenderer {
   }
 
   private initializeRenderer() {
+    Cache.enabled = true;
     this.renderer = new WebGLRenderer({
       antialias: true,
       alpha: true,
