@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-1. Clonw this repo
+1. Clone this repo
 1. In the root of this repository, install dependencies by running `npm install`
 1. Start the development server locally by running `nom run dev`. It will give you a localhost URL you can navigate to. 
 
