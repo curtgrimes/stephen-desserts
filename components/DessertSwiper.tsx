@@ -57,11 +57,7 @@ export default function DessertSwiper() {
         </SwiperSlide>
         {desserts.map((dessert, index) => (
           <SwiperSlide key={dessert.slug}>
-            <DessertCard
-              dessert={dessert}
-              index={index}
-              totalCount={desserts.length}
-            />
+            <DessertCard dessert={dessert} />
           </SwiperSlide>
         ))}
       </Swiper>
