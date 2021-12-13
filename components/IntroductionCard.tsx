@@ -12,7 +12,7 @@ export default function IntroductionCard({}: {}) {
           December 2021
         </p>
         <h1 className="text-4xl text-yellow-600">
-          Stephen's Desserts,
+          Stephen&apos;s Desserts,
           <br /> Made Just for You
         </h1>
         <SnowflakeIcon className="text-5xl text-yellow-800 my-2" />
