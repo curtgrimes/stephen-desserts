@@ -30,21 +30,21 @@ export default function DessertSwiper() {
       : 0;
 
   return (
-    <div className="h-screen flex">
+    <div className="flex">
       <Swiper
         modules={[Pagination]}
-        slidesPerView={1.25}
+        slidesPerView={1.15}
         spaceBetween={0}
         breakpoints={{
           650: {
             // when screen is >= 650
-            slidesPerView: 1.75,
+            slidesPerView: 1.15,
           },
           850: {
-            slidesPerView: 2.5,
+            slidesPerView: 2.15,
           },
           1200: {
-            slidesPerView: 3.75,
+            slidesPerView: 3.15,
           },
         }}
         pagination={{ clickable: true }}

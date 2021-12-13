@@ -10,7 +10,7 @@ module.exports = {
   theme: {
     extend: {
       letterSpacing: {
-        veryWide: '0.6rem'
+        veryWide: '0.4rem'
       }
     },
   },
