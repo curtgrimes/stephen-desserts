@@ -1,8 +1,10 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperClass from "swiper";
+import SwiperClass, { Pagination } from "swiper";
 import { useDesserts } from "hooks/useDesserts";
 import "swiper/css";
+import "swiper/css/pagination";
 import DessertCard from "components/DessertCard";
+import IntroductionCard from "components/IntroductionCard";
 import { useRouter } from "next/router";
 
 export default function DessertSwiper() {
@@ -10,27 +12,56 @@ export default function DessertSwiper() {
   const { desserts } = useDesserts(router.query.year as string);
 
   const onSlideChange = ({ activeIndex }: SwiperClass) => {
-    router.replace(`/${router.query.year}/${desserts[activeIndex].slug}`);
+    const dessertIndex = activeIndex - 1; // account for introduction card
+
+    if (dessertIndex >= 0) {
+      router.replace(`/${router.query.year}/${desserts[dessertIndex].slug}`);
+    } else {
+      // Introduction card
+      router.replace(`/${router.query.year}/about`);
+    }
   };
 
   const initialSlide = () =>
     router.query.dessertSlug
       ? desserts.findIndex(
           (dessert) => dessert.slug === router.query.dessertSlug
-        )
+        ) + 1 // account for introduction card
       : 0;
 
   return (
     <div className="h-screen flex">
       <Swiper
-        slidesPerView={1}
-        spaceBetween={50}
+        modules={[Pagination]}
+        slidesPerView={1.25}
+        spaceBetween={0}
+        breakpoints={{
+          650: {
+            // when screen is >= 650
+            slidesPerView: 1.75,
+          },
+          850: {
+            slidesPerView: 2.5,
+          },
+          1200: {
+            slidesPerView: 3.75,
+          },
+        }}
+        pagination={{ clickable: true }}
         onSlideChange={onSlideChange}
         initialSlide={initialSlide()}
+        centeredSlides={true}
       >
-        {desserts.map((dessert) => (
+        <SwiperSlide key="introduction">
+          <IntroductionCard />
+        </SwiperSlide>
+        {desserts.map((dessert, index) => (
           <SwiperSlide key={dessert.slug}>
-            <DessertCard dessert={dessert} />
+            <DessertCard
+              dessert={dessert}
+              index={index}
+              totalCount={desserts.length}
+            />
           </SwiperSlide>
         ))}
       </Swiper>
