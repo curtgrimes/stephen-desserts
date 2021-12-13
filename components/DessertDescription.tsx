@@ -21,6 +21,10 @@ export default function DessertDescription({ dessert }: { dessert: Dessert }) {
         {dessert.stephensFavorite && (
           <Note icon={HeartIcon}>Stephen&apos;s personal favorite</Note>
         )}
+
+        {dessert.curtsFavorite && (
+          <Note icon={HeartIcon}>Curt&apos;s personal favorite</Note>
+        )}
       </div>
       {dessert.recipe && (
         <Link href={`/${router.query.year}/${router.query.dessertSlug}/recipe`}>

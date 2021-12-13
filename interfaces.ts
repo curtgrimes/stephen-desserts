@@ -15,5 +15,6 @@ export interface Dessert {
   model: DessertModel;
   refrigerationRecommended: boolean;
   stephensFavorite: boolean;
+  curtsFavorite: boolean;
   recipe?: string;
 }
