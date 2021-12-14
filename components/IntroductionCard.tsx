@@ -4,9 +4,9 @@ import {
 } from "react-icons/fa";
 import { WiSnowflakeCold as SnowflakeIcon } from "react-icons/wi";
 
-export default function IntroductionCard({}: {}) {
+export default function IntroductionCard() {
   return (
-    <div className="h-full flex flex-col items-center justify-center px-1 py-3 pb-11">
+    <div className="h-full w-full height-ios flex flex-col items-center justify-center px-1 pb-11">
       <div className="h-full w-full bg-yellow-800 rounded-3xl shadow-inner bg-opacity-10 flex flex-col relative items-center justify-center text-center p-10">
         <p className="uppercase tracking-veryWide font-black text-xs">
           December 2021
