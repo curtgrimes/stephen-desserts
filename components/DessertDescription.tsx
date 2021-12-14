@@ -30,7 +30,7 @@ export default function DessertDescription({ dessert }: { dessert: Dessert }) {
     <div
       ref={descriptionElementRef}
       onScroll={handleScroll}
-      className="bg-white p-7 h-2/3 text-yellow-700 rounded-b-3xl flex flex-col max-h-[23rem] overflow-y-auto"
+      className="bg-white p-7 h-2/3 text-yellow-700 rounded-b-3xl flex flex-col h-[23rem] overflow-y-auto"
     >
       <div className="mb-auto">
         {/* Overlay that appears on overflowed text */}
