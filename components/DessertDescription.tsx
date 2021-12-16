@@ -6,8 +6,22 @@ import { CgSmartHomeRefrigerator as RefrigeratorIcon } from "react-icons/cg";
 import { FaHeart as HeartIcon } from "react-icons/fa";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { useIntersectionObserverRef } from "rooks";
+import {
+  FaChevronLeft as ChevronLeftIcon,
+  FaChevronRight as ChevronRightIcon,
+} from "react-icons/fa";
 
-export default function DessertDescription({ dessert }: { dessert: Dessert }) {
+export default function DessertDescription({
+  dessert,
+  onNavigateToPreviousSlide,
+  onNavigateToNextSlide,
+  isLast,
+}: {
+  dessert: Dessert;
+  onNavigateToPreviousSlide: Function;
+  onNavigateToNextSlide: Function;
+  isLast: boolean;
+}) {
   const router = useRouter();
   const [isOverflowing, setIsOverflowing] = useState(false);
   const [isScrolledNearBottom, setIsScrolledNearBottom] = useState(false);
@@ -69,11 +83,26 @@ export default function DessertDescription({ dessert }: { dessert: Dessert }) {
           <Note icon={HeartIcon}>Curt&apos;s personal favorite</Note>
         )}
       </div>
-      {dessert.recipe && (
-        <Link href={`/${router.query.year}/${dessert.slug}/recipe`}>
-          <a className="button mt-4 swiper-no-swiping">View Recipe</a>
-        </Link>
-      )}
+      <div className="flex mt-4 gap-x-2">
+        <button
+          onClick={() => onNavigateToPreviousSlide()}
+          className="device-not-touchscreen button w-1/4 opacity-60 hover:opacity-100"
+        >
+          <ChevronLeftIcon />
+        </button>
+        {dessert.recipe && (
+          <Link href={`/${router.query.year}/${dessert.slug}/recipe`}>
+            <a className="button swiper-no-swiping w-full">View Recipe</a>
+          </Link>
+        )}
+        <button
+          onClick={() => onNavigateToNextSlide()}
+          disabled={isLast}
+          className="device-not-touchscreen button w-1/4 opacity-60 hover:opacity-100"
+        >
+          <ChevronRightIcon />
+        </button>
+      </div>
     </div>
   );
 }

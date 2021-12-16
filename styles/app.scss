@@ -36,6 +36,10 @@
 @layer components {
   .button {
     @apply px-2 py-4 flex items-center justify-center font-bold rounded-lg bg-yellow-100 border border-yellow-200 text-yellow-600;
+
+    &:disabled {
+      @apply pointer-events-none opacity-30;
+    }
   }
 
   .h-card {

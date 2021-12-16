@@ -23,7 +23,7 @@ export default function DessertSwiper() {
     const dessertIndex = activeIndex - 1; // account for introduction card
 
     if (dessertIndex >= 0) {
-      // router.replace(`/${router.query.year}/${desserts[dessertIndex].slug}`);
+      router.replace(`/${router.query.year}/${desserts[dessertIndex].slug}`);
     } else {
       // Introduction card
       router.replace(`/${router.query.year}/about`);
@@ -66,7 +66,8 @@ export default function DessertSwiper() {
             spaceBetween: 30,
           },
           1200: {
-            slidesPerView: 3.15,
+            slidesPerView: 3.2,
+            spaceBetween: 50,
           },
         }}
         pagination={{ clickable: true }}
@@ -79,9 +80,14 @@ export default function DessertSwiper() {
             onNavigateToFirstDessert={() => swiper?.slideTo(1)}
           />
         </SwiperSlide>
-        {desserts.map((dessert) => (
+        {desserts.map((dessert, index) => (
           <SwiperSlide key={dessert.slug}>
-            <DessertCard dessert={dessert} />
+            <DessertCard
+              dessert={dessert}
+              onNavigateToPreviousSlide={() => swiper.slidePrev()}
+              onNavigateToNextSlide={() => swiper.slideNext()}
+              isLast={desserts.length === index + 1}
+            />
           </SwiperSlide>
         ))}
       </Swiper>
