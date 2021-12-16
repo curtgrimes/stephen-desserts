@@ -70,8 +70,8 @@ export default function DessertDescription({ dessert }: { dessert: Dessert }) {
         )}
       </div>
       {dessert.recipe && (
-        <Link href={`/${router.query.year}/${router.query.dessertSlug}/recipe`}>
-          <a className="button mt-4">View Recipe</a>
+        <Link href={`/${router.query.year}/${dessert.slug}/recipe`}>
+          <a className="button mt-4 swiper-no-swiping">View Recipe</a>
         </Link>
       )}
     </div>

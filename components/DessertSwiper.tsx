@@ -16,10 +16,14 @@ export default function DessertSwiper() {
   const { desserts } = useDesserts(router.query.year as string);
 
   const onSlideChange = ({ activeIndex }: SwiperClass) => {
+    if (router.route !== "/[year]/[dessertSlug]") {
+      return;
+    }
+
     const dessertIndex = activeIndex - 1; // account for introduction card
 
     if (dessertIndex >= 0) {
-      router.replace(`/${router.query.year}/${desserts[dessertIndex].slug}`);
+      // router.replace(`/${router.query.year}/${desserts[dessertIndex].slug}`);
     } else {
       // Introduction card
       router.replace(`/${router.query.year}/about`);
@@ -42,10 +46,7 @@ export default function DessertSwiper() {
 
   const previousDessertSlug = usePreviousDifferent(currentDessertSlug);
   useEffect(() => {
-    if (!previousDessertSlug && currentDessertSlug) {
-      // It changed for the first time
-      swiper?.slideTo(getCardIndex(currentDessertSlug));
-    }
+    swiper?.slideTo(getCardIndex(currentDessertSlug));
   }, [previousDessertSlug, swiper, getCardIndex, currentDessertSlug]);
 
   return (

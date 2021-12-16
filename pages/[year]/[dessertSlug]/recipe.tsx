@@ -8,12 +8,19 @@ import {
 } from "react-icons/ai";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
+import { useDidMount } from "rooks";
 export default function RecipePage() {
   const { dessert, loading } = useDessert();
   const router = useRouter();
   const backPath = `/${router.query.year}/${router.query.dessertSlug}`;
   const backPathIsPreviousInHistory =
     backPath === globalThis?.sessionStorage?.getItem("previousPath");
+
+  useDidMount(() => {
+    if (dessert) {
+      router.replace(`/${router.query.year}/${dessert.slug}/recipe`);
+    }
+  });
 
   return (
     <motion.div className="fixed inset-0 z-10 overflow-y-auto pt-5 bg-black bg-opacity-50">
