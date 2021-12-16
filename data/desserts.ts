@@ -11,7 +11,7 @@ const desserts = {
             "It’s the most wonderful time of the year to enjoy a twist on the classic rice crispy treat. Melted marshmallow, blended with chocolate rice crispy cereal and dulce de leche sauce, creates a decadent treat topped with chocolate chips and pretzels.",
           model: {
             path: "/static/models/2021/chocolate-pretzel-rice-crispy.gltf",
-            scale: 0.065,
+            scale: 0.075,
             rotation: {
               x: 0.4,
               y: 3,
@@ -48,7 +48,7 @@ const desserts = {
             "Chocolate lovers rejoice! This chewy double chocolate peppermint cookie will help make your spirit bright this Christmas. The cool hint of mint will have Jack Frost nipping at your nose, so enjoy this delicious treat by the fire with a warm cup of cocoa.",
           model: {
             path: "/static/models/2021/death-by-chocolate-peppermint-cookie.gltf",
-            scale: 0.8,
+            scale: 1,
             rotation: {
               x: 0.4,
               y: 3.5,
@@ -187,7 +187,7 @@ const desserts = {
           description:
             "‘Tis the season to indulge in these chewy and delicious brown butter pumpkin chocolate chip cookies with a creamy Nutella center. Take one bite and all you’ll want this Christmas is this decadent treat.",
           model: {
-            path: "/static/models/2021/death-by-chocolate-peppermint-cookie.gltf",
+            path: "/static/models/2021/brown-butter-nutella-stuffed-pumpkin-chocolate-chip-cookie.gltf",
             scale: 1,
             rotation: {
               x: 0.4,
