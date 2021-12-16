@@ -13,6 +13,7 @@
 1. move model to origin 0,0,0
 1. Clean up mesh
    1. Edit mode > "A" to select all > Mesh > clean up > decimate
+   1. Mesh > shading > smooth edges
 1. UV editing button at top
    1. Image > Open, open file
    1. hit "A" to select all the UVs
@@ -23,6 +24,7 @@
    1. Enable "use nodes" if not already enabled
    1. Color = image texture
    1. Choose file
+   1. Metallic = 0, Specular = 0.5
 1. Export gltf, do not compress
 1. Convert with draco compression: gltf-pipeline -i public/static/models/2021/death-by-chocolate-peppermint-cookie.gltf -o public/static/models/2021/dessert2.gltf -d
 1. Update desserts.ts accordingly

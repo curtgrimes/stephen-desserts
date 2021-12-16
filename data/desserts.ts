@@ -95,7 +95,7 @@ const desserts = {
           description:
             "While the weather outside may be frightful, these chunky chocolate peanut butter cookies are sure to be delightful. With a hint of chocolate in every bite, these peanut butter treats may just have what it takes to become a yuletide cookie treasure.",
           model: {
-            path: "/static/models/2021/death-by-chocolate-peppermint-cookie.gltf",
+            path: "/static/models/2021/chunky-chocolate-peanut-butter-cookie.gltf",
             scale: 1,
             rotation: {
               x: 0.4,
@@ -237,8 +237,8 @@ const desserts = {
           description:
             "One bite of this soft banana bread cookie and your taste buds will be aglow. You’ll come to adore these small cookie treats topped with a luscious cream cheese frosting during this most wonderful time of the year.",
           model: {
-            path: "/static/models/2021/death-by-chocolate-peppermint-cookie.gltf",
-            scale: 1,
+            path: "/static/models/2021/soft-banana-bread-cookie.gltf",
+            scale: 1.25,
             rotation: {
               x: 0.4,
               y: 3,
