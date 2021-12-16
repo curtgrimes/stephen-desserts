@@ -7,7 +7,7 @@ import DessertCard from "components/DessertCard";
 import IntroductionCard from "components/IntroductionCard";
 import { useRouter } from "next/router";
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { useDidMount, usePreviousDifferent } from "rooks";
+import { usePreviousDifferent } from "rooks";
 import { Dessert } from "interfaces";
 
 export default function DessertSwiper() {
@@ -75,9 +75,11 @@ export default function DessertSwiper() {
         centeredSlides={true}
       >
         <SwiperSlide key="introduction">
-          <IntroductionCard />
+          <IntroductionCard
+            onNavigateToFirstDessert={() => swiper?.slideTo(1)}
+          />
         </SwiperSlide>
-        {desserts.map((dessert, index) => (
+        {desserts.map((dessert) => (
           <SwiperSlide key={dessert.slug}>
             <DessertCard dessert={dessert} />
           </SwiperSlide>

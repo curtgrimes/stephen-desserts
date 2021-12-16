@@ -12,8 +12,8 @@ module.exports = {
       letterSpacing: {
         veryWide: '0.4rem'
       },
-      screens: {
-        'print': { 'raw': 'print' },
+      cursor: {
+        grab: 'grab'
       }
     },
   },

@@ -66,3 +66,15 @@
     margin: 0 auto;
   }
 }
+
+@media (hover: hover) {
+  .device-touchscreen {
+    display: none !important;
+  }
+}
+
+@media (pointer: coarse) and (hover: none) {
+  .device-not-touchscreen {
+    display: none !important;
+  }
+}
