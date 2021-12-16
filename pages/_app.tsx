@@ -3,6 +3,12 @@ import { useEffect } from "react";
 import Head from "next/head";
 import "styles/app.scss";
 
+declare global {
+  interface Window {
+    gtag: any;
+  }
+}
+
 export default function MyApp({ Component, pageProps }) {
   // Use the layout defined at the page level, if available
   const getLayout = Component.getLayout || ((page) => page);
@@ -11,7 +17,7 @@ export default function MyApp({ Component, pageProps }) {
   useEffect(() => storePathValues, [router.asPath]);
 
   const handleRouteChange = (url) => {
-    window?.gtag("config", "[Tracking ID]", {
+    window.gtag("config", "[Tracking ID]", {
       page_path: url,
     });
   };
