@@ -6,7 +6,7 @@ import "swiper/css/pagination";
 import DessertCard from "components/DessertCard";
 import IntroductionCard from "components/IntroductionCard";
 import { useRouter } from "next/router";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { useDidMount, usePreviousDifferent } from "rooks";
 import { Dessert } from "interfaces";
 
@@ -26,23 +26,27 @@ export default function DessertSwiper() {
     }
   };
 
+  const currentDessertSlug = useMemo(
+    () => router.query.dessertSlug as Dessert["slug"],
+    [router.query.dessertSlug]
+  );
+
   const getCardIndex = useCallback(
     (dessertSlug: Dessert["slug"]) =>
       dessertSlug
-        ? desserts.findIndex(
-            (dessert) => dessert.slug === router.query.dessertSlug
-          ) + 1 // account for introduction card
+        ? desserts.findIndex((dessert) => dessert.slug === currentDessertSlug) +
+          1 // account for introduction card
         : 0,
-    [desserts, router.query.dessertSlug]
+    [desserts, currentDessertSlug]
   );
 
-  const previousDessertSlug = usePreviousDifferent(router.query.dessertSlug);
+  const previousDessertSlug = usePreviousDifferent(currentDessertSlug);
   useEffect(() => {
-    if (!previousDessertSlug && router.query.dessertSlug) {
+    if (!previousDessertSlug && currentDessertSlug) {
       // It changed for the first time
-      swiper.slideTo(getCardIndex(router.query.dessertSlug as Dessert["slug"]));
+      swiper.slideTo(getCardIndex(currentDessertSlug));
     }
-  }, [previousDessertSlug, swiper, getCardIndex, router.query.dessertSlug]);
+  }, [previousDessertSlug, swiper, getCardIndex, currentDessertSlug]);
 
   return (
     <div className="flex sm:h-screen items-center my-2">
@@ -66,7 +70,7 @@ export default function DessertSwiper() {
         }}
         pagination={{ clickable: true }}
         onSlideChange={onSlideChange}
-        initialSlide={getCardIndex(router.query.dessertSlug)}
+        initialSlide={getCardIndex(currentDessertSlug)}
         centeredSlides={true}
       >
         <SwiperSlide key="introduction">
