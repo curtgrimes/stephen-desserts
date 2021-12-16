@@ -1,7 +1,21 @@
+import { useDessert } from "hooks/useDesserts";
 import YearLayout from "layouts/YearLayout";
+import Head from "next/head";
 
 export default function DessertPage() {
-  return <div></div>;
+  const { dessert } = useDessert();
+
+  return (
+    <div>
+      <Head>
+        <title>
+          {dessert
+            ? `${dessert.name} - Stephen's Desserts`
+            : "Stephen's Desserts - December 2021"}
+        </title>
+      </Head>
+    </div>
+  );
 }
 
 DessertPage.getLayout = YearLayout;
