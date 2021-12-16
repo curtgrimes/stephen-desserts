@@ -11,10 +11,10 @@ const desserts = {
             "It’s the most wonderful time of the year to enjoy a twist on the classic rice crispy treat. Melted marshmallow, blended with chocolate rice crispy cereal and dulce de leche sauce, creates a decadent treat topped with chocolate chips and pretzels.",
           model: {
             path: "/static/models/2021/chocolate-pretzel-rice-crispy.gltf",
-            scale: 0.075,
+            scale: 0.08,
             rotation: {
-              x: 0.4,
-              y: 3,
+              x: 0.3,
+              y: 1,
               z: 0.4,
             },
           },

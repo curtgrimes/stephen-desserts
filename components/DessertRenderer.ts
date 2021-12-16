@@ -29,7 +29,7 @@ export class DessertRenderer {
   private controls: OrbitControls;
   private model: Group;
 
-  private autoRotateSpeed = 3;
+  private autoRotateSpeed = 1.5;
 
   public initialized: boolean = false;
   private paused: boolean = false;
