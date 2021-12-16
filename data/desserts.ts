@@ -137,7 +137,7 @@ const desserts = {
           description:
             "Jolly Old St. Nick would love to take a bite out of these snickerdoodles with their crunchy exterior and chewy center. The cinnamon sugar coating and caramel-like flavor from the browned butter will be sure to bring you joy this Christmas season.",
           model: {
-            path: "/static/models/2021/death-by-chocolate-peppermint-cookie.gltf",
+            path: "/static/models/2021/brown-butter-snickerdoodle-cookie.gltf",
             scale: 1,
             rotation: {
               x: 0.4,
