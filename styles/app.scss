@@ -27,6 +27,10 @@
   table {
     @apply w-full text-left border px-2 py-1 bg-white rounded;
   }
+
+  ol {
+    @apply list-decimal list-inside;
+  }
 }
 
 @layer components {
@@ -51,6 +55,10 @@
   }
 
   .print:d-none {
-    display: none;
+    display: none !important;
+  }
+
+  .text-center {
+    text-align: left !important;
   }
 }
