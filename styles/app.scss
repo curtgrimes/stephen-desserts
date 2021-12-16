@@ -34,14 +34,8 @@
     @apply px-2 py-4 flex items-center justify-center font-bold rounded-lg bg-yellow-100 border border-yellow-200 text-yellow-600;
   }
 
-  /* CSS specific to iOS devices */
-  @supports (-webkit-touch-callout: none) {
-    /* Workaround for toolbar on bottom obscuring viewport */
-    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
-      .height-ios {
-        height: calc(88vh);
-      }
-    }
+  .h-card {
+    @apply h-[95vh];
   }
 }
 

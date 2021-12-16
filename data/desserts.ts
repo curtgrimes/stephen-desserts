@@ -1,10 +1,4 @@
-// storage instructions like keep cold
-// recipe
-
-import * as chanceImport from "chance";
 import { Dessert } from "interfaces";
-const { Chance } = chanceImport;
-const chance = Chance("seed-12345");
 
 const desserts = {
   years: {

@@ -4,13 +4,26 @@ import Note from "./Note";
 import Link from "next/link";
 import { CgSmartHomeRefrigerator as RefrigeratorIcon } from "react-icons/cg";
 import { FaHeart as HeartIcon } from "react-icons/fa";
-import { useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useIntersectionObserverRef } from "rooks";
 
 export default function DessertDescription({ dessert }: { dessert: Dessert }) {
   const router = useRouter();
   const [isOverflowing, setIsOverflowing] = useState(false);
-  const [isScrolledToBottom, setIsScrolledToBottom] = useState(false);
+  const [isScrolledNearBottom, setIsScrolledNearBottom] = useState(false);
   const descriptionElementRef = useRef();
+  const [isVisible, setIsVisible] = useState(false);
+  const [visibilityRef] = useIntersectionObserverRef((entries) => {
+    if (entries && entries[0]) {
+      setIsVisible(entries[0].isIntersecting);
+    }
+  });
+
+  useEffect(() => {
+    if (isVisible) {
+      (descriptionElementRef.current as HTMLElement).scrollTop = 0;
+    }
+  }, [isVisible]);
 
   useLayoutEffect(
     () =>
@@ -22,21 +35,22 @@ export default function DessertDescription({ dessert }: { dessert: Dessert }) {
   );
 
   const handleScroll = (e) =>
-    setIsScrolledToBottom(
-      e.target.scrollHeight - e.target.scrollTop === e.target.clientHeight
+    setIsScrolledNearBottom(
+      e.target.scrollHeight - e.target.scrollTop - e.target.clientHeight <= 100
     );
 
   return (
     <div
       ref={descriptionElementRef}
       onScroll={handleScroll}
-      className="bg-white p-7 h-2/3 text-yellow-700 rounded-b-3xl flex flex-col h-[23rem] overflow-y-auto"
+      className="bg-white p-7 h-2/3 text-yellow-700 rounded-b-3xl flex flex-col overflow-y-auto"
+      style={{ overscrollBehaviorY: "none" }}
     >
-      <div className="mb-auto">
+      <div className="mb-auto" ref={visibilityRef}>
         {/* Overlay that appears on overflowed text */}
         <div
-          className={`absolute bottom-0 inset-x-0 h-32 bg-gradient-to-b from-[rgba(255,255,255,0)]  to-white transition-opacity pointer-events-none ${
-            isOverflowing && !isScrolledToBottom ? "opacity-100" : "opacity-0"
+          className={`absolute bottom-0 inset-x-0 h-32 rounded-b-3xl bg-gradient-to-b from-[rgba(255,255,255,0)]  to-white transition-opacity pointer-events-none ${
+            isOverflowing && !isScrolledNearBottom ? "opacity-100" : "opacity-0"
           }`}
         ></div>
 

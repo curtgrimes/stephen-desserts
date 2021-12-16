@@ -5082,10 +5082,10 @@
     "hash-base" "^3.0.0"
     "inherits" "^2.0.1"
 
-"rooks@^5.7.3":
-  "integrity" "sha512-Y+HzDzEptIg3RwIB0mGqYL2MfB1PVosOlG1DLy1rm6McSdK7xQ6olLjicoSpmTrkBdiJuZMOVaowLJz61HclXQ=="
-  "resolved" "https://registry.npmjs.org/rooks/-/rooks-5.7.3.tgz"
-  "version" "5.7.3"
+"rooks@^5.8.0":
+  "integrity" "sha512-NCtqne2d6IRvxBjCJRls0DUrgQP5UOGFr8WrKFlnhtIdneZBuNaPRYK6RKYI+bDQvHYxml/M1TsS87yVzcLfVQ=="
+  "resolved" "https://registry.npmjs.org/rooks/-/rooks-5.8.0.tgz"
+  "version" "5.8.0"
   dependencies:
     "lodash.debounce" "^4.0.8"
     "raf" "^3.4.1"

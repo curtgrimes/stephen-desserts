@@ -30,7 +30,7 @@ export default function DessertSwiper() {
       : 0;
 
   return (
-    <div className="flex md:h-screen md:pb-32 items-center my-2">
+    <div className="flex sm:h-screen items-center my-2">
       <Swiper
         modules={[Pagination]}
         slidesPerView={1.15}
