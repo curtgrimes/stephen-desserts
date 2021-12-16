@@ -6,21 +6,17 @@ import React from "react";
 
 export default function Dessert3DView({
   dessert,
-  doInitialSpin = true,
+  doInitialSpin = false,
 }: {
   dessert: Dessert;
   doInitialSpin?: boolean;
 }) {
   const [isVisible, setIsVisible] = useState(false);
   const container = useRef(null);
-  const dessertRender = useRef(
-    new DessertRenderer(dessert, container, {
-      doInitialSpin,
-    })
-  );
+  const dessertRender = useRef(null);
 
   const resizeObserver = new ResizeObserver(() =>
-    dessertRender.current.updateCanvasSize({ force: true })
+    dessertRender.current?.updateCanvasSize({ force: true })
   );
 
   const intersectionObserver = new IntersectionObserver(
@@ -31,8 +27,6 @@ export default function Dessert3DView({
   );
 
   useDidMount(() => {
-    dessertRender.current.render();
-
     resizeObserver.observe(container.current, { box: "content-box" });
     intersectionObserver.observe(container.current);
   });
@@ -45,11 +39,18 @@ export default function Dessert3DView({
 
   useEffect(() => {
     if (isVisible) {
+      if (!dessertRender.current) {
+        dessertRender.current = new DessertRenderer(dessert, container, {
+          doInitialSpin,
+        });
+        dessertRender.current.render();
+      }
+
       dessertRender.current.resume();
-    } else {
+    } else if (dessertRender.current) {
       dessertRender.current.pause();
     }
-  }, [isVisible]);
+  }, [isVisible, dessert, doInitialSpin]);
 
   return (
     <div
