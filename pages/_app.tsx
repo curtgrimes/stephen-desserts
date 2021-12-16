@@ -1,7 +1,6 @@
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import Head from "next/head";
-import { AnimatePresence } from "framer-motion";
 import "styles/app.scss";
 
 export default function MyApp({ Component, pageProps }) {
@@ -10,6 +9,19 @@ export default function MyApp({ Component, pageProps }) {
 
   const router = useRouter();
   useEffect(() => storePathValues, [router.asPath]);
+
+  const handleRouteChange = (url) => {
+    window.gtag("config", "[Tracking ID]", {
+      page_path: url,
+    });
+  };
+
+  useEffect(() => {
+    router.events.on("routeChangeComplete", handleRouteChange);
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, [router.events]);
 
   function storePathValues() {
     const storage = globalThis?.sessionStorage;
@@ -33,10 +45,25 @@ export default function MyApp({ Component, pageProps }) {
           name="description"
           content="Learn more about the desserts Stephen has made for you this Christmas season. And if you really like one of them, feel free to grab the recipe!"
         />
+
+        {/* Google Analytics */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-EEFY64ZHCR"
+        />
+
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-EEFY64ZHCR', { page_path: window.location.pathname });
+            `,
+          }}
+        />
       </Head>
-      <AnimatePresence>
-        {getLayout(<Component {...pageProps} />)}
-      </AnimatePresence>
+      {getLayout(<Component {...pageProps} />)}
     </>
   );
 }
