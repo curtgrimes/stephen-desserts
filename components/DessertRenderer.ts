@@ -108,7 +108,7 @@ export class DessertRenderer {
     this.controls.enableRotate = true;
     this.controls.enablePan = false;
     this.controls.enableDamping = true;
-    this.controls.enableZoom = true;
+    this.controls.enableZoom = false;
     this.controls.autoRotate = true;
     this.controls.autoRotateSpeed = this.doInitialSpin
       ? 160
