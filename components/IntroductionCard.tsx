@@ -18,22 +18,22 @@ export default function IntroductionCard({ onNavigateToFirstDessert }) {
           Stephen&apos;s Desserts,
           <br /> Made Just for You
         </h1>
-        <SnowflakeIcon className="text-5xl text-yellow-800 my-2" />
+        <SnowflakeIcon className="hidden sm:block text-5xl text-yellow-800 my-2" />
         <p className="text-yellow-800 text-opacity-80 font-bold">
           Learn more about the desserts Stephen has made for you this Christmas
           season. And if you really like one of them, feel free to grab the
           recipe!
         </p>
-        <p className="device-touchscreen text-lg flex items-center mt-10 mb-12">
+        <p className="device-touchscreen text-lg flex items-center my-0 sm:my-10">
           Swipe to continue{" "}
           <span className="rotate-90 ml-2 text-4xl">
             <RightArrowIcon className="animate-bounce" />
           </span>
         </p>
-        <p className="device-not-touchscreen text-lg flex items-center mt-10 mb-12">
+        <p className="device-not-touchscreen text-lg flex items-center my-5 sm:my-10">
           <button
             onClick={onNavigateToFirstDessert}
-            className="flex rounded bg-black bg-opacity-5 px-4 py-2 items-center"
+            className="flex rounded button px-4 sm:px-14 items-center max-w-full"
           >
             <span className="mb-1 mr-2">Continue</span>
             <FaChevronRight />
