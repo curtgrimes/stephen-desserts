@@ -11,7 +11,7 @@ const desserts = {
             "It’s the most wonderful time of the year to enjoy a twist on the classic rice crispy treat. Melted marshmallow, blended with chocolate rice crispy cereal and dulce de leche sauce, creates a decadent treat topped with chocolate chips and pretzels.",
           model: {
             path: "/static/models/2021/chocolate-pretzel-rice-crispy.gltf",
-            scale: 0.1,
+            scale: 0.065,
             rotation: {
               x: 0.4,
               y: 3,
@@ -48,10 +48,10 @@ const desserts = {
             "Chocolate lovers rejoice! This chewy double chocolate peppermint cookie will help make your spirit bright this Christmas. The cool hint of mint will have Jack Frost nipping at your nose, so enjoy this delicious treat by the fire with a warm cup of cocoa.",
           model: {
             path: "/static/models/2021/death-by-chocolate-peppermint-cookie.gltf",
-            scale: 1,
+            scale: 0.8,
             rotation: {
               x: 0.4,
-              y: 3,
+              y: 3.5,
               z: 0.4,
             },
           },

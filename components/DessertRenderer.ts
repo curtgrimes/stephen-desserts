@@ -181,7 +181,7 @@ export class DessertRenderer {
   }
 
   updateCanvasSize({ force = false }: { force: boolean }) {
-    const fov = 50;
+    const fov = 20;
     const planeAspectRatio = 16 / 9;
 
     if (this.camera.aspect > planeAspectRatio) {
