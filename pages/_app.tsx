@@ -11,7 +11,7 @@ export default function MyApp({ Component, pageProps }) {
   useEffect(() => storePathValues, [router.asPath]);
 
   const handleRouteChange = (url) => {
-    window.gtag("config", "[Tracking ID]", {
+    window?.gtag("config", "[Tracking ID]", {
       page_path: url,
     });
   };
