@@ -44,7 +44,7 @@ export default function DessertSwiper() {
   useEffect(() => {
     if (!previousDessertSlug && currentDessertSlug) {
       // It changed for the first time
-      swiper.slideTo(getCardIndex(currentDessertSlug));
+      swiper?.slideTo(getCardIndex(currentDessertSlug));
     }
   }, [previousDessertSlug, swiper, getCardIndex, currentDessertSlug]);
 
