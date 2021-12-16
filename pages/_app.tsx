@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import { useEffect } from "react";
+import { AnimatePresence } from "framer-motion";
 import "styles/app.scss";
 
 export default function MyApp({ Component, pageProps }) {
@@ -19,5 +20,7 @@ export default function MyApp({ Component, pageProps }) {
     storage.setItem("currentPath", globalThis.location.pathname);
   }
 
-  return getLayout(<Component {...pageProps} />);
+  return (
+    <AnimatePresence>{getLayout(<Component {...pageProps} />)}</AnimatePresence>
+  );
 }

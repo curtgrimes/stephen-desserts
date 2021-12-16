@@ -43,3 +43,14 @@
   height: auto !important;
   @apply flex;
 }
+
+@media print {
+  .max-w-lg {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .print:d-none {
+    display: none;
+  }
+}

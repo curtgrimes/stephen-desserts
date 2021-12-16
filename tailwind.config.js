@@ -11,6 +11,9 @@ module.exports = {
     extend: {
       letterSpacing: {
         veryWide: '0.4rem'
+      },
+      screens: {
+        'print': { 'raw': 'print' },
       }
     },
   },

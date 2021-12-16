@@ -49,7 +49,7 @@ export default function DessertSwiper() {
   }, [previousDessertSlug, swiper, getCardIndex, currentDessertSlug]);
 
   return (
-    <div className="flex sm:h-screen items-center my-2">
+    <div key="dessertSwiper" className="flex sm:h-screen items-center my-2">
       <Swiper
         onSwiper={setSwiper}
         modules={[Pagination]}
