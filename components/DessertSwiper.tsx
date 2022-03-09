@@ -9,6 +9,10 @@ import { useRouter } from "next/router";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { usePreviousDifferent } from "rooks";
 import { Dessert } from "interfaces";
+import resolveConfig from "tailwindcss/resolveConfig";
+import tailwindConfig from "tailwind.config.js";
+
+const tailwind = resolveConfig(tailwindConfig);
 
 export default function DessertSwiper() {
   const router = useRouter();
@@ -50,7 +54,15 @@ export default function DessertSwiper() {
   }, [previousDessertSlug, swiper, getCardIndex, currentDessertSlug]);
 
   return (
-    <div key="dessertSwiper" className="flex sm:h-screen items-center my-2">
+    <div
+      key="dessertSwiper"
+      className="flex sm:h-screen items-center my-2"
+      style={
+        {
+          "--swiper-pagination-color": tailwind.theme.colors.amber[700],
+        } as React.CSSProperties
+      }
+    >
       <Swiper
         onSwiper={setSwiper}
         modules={[Pagination]}
