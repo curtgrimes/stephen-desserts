@@ -7,7 +7,7 @@
 @layer base {
   body {
     font-family: "Zen Kaku Gothic New", sans-serif;
-    @apply bg-amber-100;
+    @apply bg-amber-100 selection:bg-amber-300;
   }
 
   h1 {
