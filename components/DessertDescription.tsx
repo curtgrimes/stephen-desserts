@@ -40,7 +40,7 @@ export default function DessertDescription({
   return (
     <div
       ref={descriptionElementRef}
-      className="bg-white p-7 h-2/3 text-yellow-700 rounded-b-3xl flex flex-col"
+      className="bg-white p-7 h-2/3 text-amber-700 rounded-b-3xl flex flex-col"
       style={{ overscrollBehaviorY: "none" }}
     >
       <div className="overflow-y-auto" ref={visibilityRef}>

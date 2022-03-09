@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import { useEffect } from "react";
 import Head from "next/head";
 import "styles/app.scss";
+import Script from "next/script";
 
 declare global {
   interface Window {
@@ -50,24 +51,21 @@ export default function MyApp({ Component, pageProps }) {
           name="description"
           content="Learn more about the desserts Stephen has made for you this Christmas season. And if you really like one of them, feel free to grab the recipe!"
         />
-
-        {/* Google Analytics */}
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-EEFY64ZHCR"
-        />
-
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-EEFY64ZHCR', { page_path: window.location.pathname });
-            `,
-          }}
-        />
       </Head>
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-EEFY64ZHCR"
+        strategy="afterInteractive"
+      />
+      {/* Google Analytics */}
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-EEFY64ZHCR');
+        `}
+      </Script>
       {getLayout(<Component {...pageProps} />)}
     </>
   );

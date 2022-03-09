@@ -1,24 +1,18 @@
 module.exports = {
-  purge: {
-    content: [
-      './pages/**/*.{js,ts,jsx,tsx}',
-      './components/**/*.{js,ts,jsx,tsx}'
-    ],
-  },
-  mode: 'jit',
-  darkMode: false, // or 'media' or 'class'
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+  ],
+  mode: "jit",
   theme: {
     extend: {
       letterSpacing: {
-        veryWide: '0.4rem'
+        veryWide: "0.4rem",
       },
       cursor: {
-        grab: 'grab'
-      }
+        grab: "grab",
+      },
     },
   },
-  variants: {
-    extend: {},
-  },
   plugins: [],
-}
+};

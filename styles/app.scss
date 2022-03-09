@@ -7,13 +7,11 @@
 @layer base {
   body {
     font-family: "Zen Kaku Gothic New", sans-serif;
-    @apply bg-yellow-100;
-
-    --swiper-theme-color: rgba(217, 119, 6, 1);
+    @apply bg-amber-100;
   }
 
   h1 {
-    @apply text-yellow-600 font-black text-xl mb-3;
+    @apply text-amber-600 font-black text-xl mb-3;
   }
 
   h2 {
@@ -35,7 +33,7 @@
 
 @layer components {
   .button {
-    @apply px-2 py-4 flex items-center justify-center font-bold rounded-lg bg-yellow-100 border border-yellow-200 text-yellow-600;
+    @apply px-2 py-4 flex items-center justify-center font-bold rounded-lg bg-amber-100 border border-amber-200 text-amber-600;
 
     &:disabled {
       @apply pointer-events-none opacity-30;

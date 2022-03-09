@@ -10,16 +10,16 @@ import { useDesserts } from "hooks/useDesserts";
 export default function IntroductionCard({ onNavigateToFirstDessert }) {
   return (
     <div className="h-card w-full flex flex-col items-center justify-center px-1 pb-11">
-      <div className="h-full w-full bg-yellow-800 rounded-3xl shadow-inner bg-opacity-10 flex flex-col relative items-center justify-center text-center p-10">
+      <div className="h-full w-full bg-amber-800 rounded-3xl shadow-inner bg-opacity-10 flex flex-col relative items-center justify-center text-center p-10">
         <p className="uppercase tracking-veryWide font-black text-xs">
           December 2021
         </p>
-        <h1 className="text-2xl text-yellow-600">
+        <h1 className="text-2xl text-amber-600">
           Stephen&apos;s Desserts,
           <br /> Made Just for You
         </h1>
-        <SnowflakeIcon className="hidden sm:block text-5xl text-yellow-800 my-2" />
-        <p className="text-yellow-800 text-opacity-80 font-bold">
+        <SnowflakeIcon className="hidden sm:block text-5xl text-amber-800 my-2" />
+        <p className="text-amber-800 text-opacity-80 font-bold">
           Learn more about the desserts Stephen has made for you this Christmas
           season. And if you really like one of them, feel free to grab the
           recipe!
