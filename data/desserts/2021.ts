@@ -1,27 +1,24 @@
 import { Dessert } from "interfaces";
 
-const desserts = {
-  years: {
-    2021: {
-      desserts: [
-        {
-          name: "Chocolate Pretzel Rice Crispy",
-          slug: "chocolate-pretzel-rice-crispy",
-          description:
-            "It’s the most wonderful time of the year to enjoy a twist on the classic rice crispy treat. Melted marshmallow, blended with chocolate rice crispy cereal and dulce de leche sauce, creates a decadent treat topped with chocolate chips and pretzels.",
-          model: {
-            path: "/static/models/2021/chocolate-pretzel-rice-crispy.gltf",
-            scale: 0.08,
-            rotation: {
-              x: 0.3,
-              y: 1,
-              z: 0.4,
-            },
-          },
-          refrigerationRecommended: true,
-          stephensFavorite: false,
-          curtsFavorite: true,
-          recipe: `
+export default [
+  {
+    name: "Chocolate Pretzel Rice Crispy",
+    slug: "chocolate-pretzel-rice-crispy",
+    description:
+      "It’s the most wonderful time of the year to enjoy a twist on the classic rice crispy treat. Melted marshmallow, blended with chocolate rice crispy cereal and dulce de leche sauce, creates a decadent treat topped with chocolate chips and pretzels.",
+    model: {
+      path: "/static/models/2021/chocolate-pretzel-rice-crispy.gltf",
+      scale: 0.08,
+      rotation: {
+        x: 0.3,
+        y: 1,
+        z: 0.4,
+      },
+    },
+    refrigerationRecommended: true,
+    stephensFavorite: false,
+    curtsFavorite: true,
+    recipe: `
 ## Ingredients
 
 **1 cup** chocolate chips  
@@ -40,25 +37,25 @@ const desserts = {
 5. Scrape the mixture into the prepared pan and spread evenly with a greased spatula or with the paper from the used stick of butter. Let cool until firm, 15 to 20 minutes, then cut into desired number of squares.
 6. Store in an airtight container on your counter for up to 5 days or place in the refrigerator for up to 2 weeks.
 `,
-        },
-        {
-          name: "Death by Chocolate Peppermint Cookie",
-          slug: "death-by-chocolate-peppermint-cookie",
-          description:
-            "Chocolate lovers rejoice! This chewy double chocolate peppermint cookie will help make your spirit bright this Christmas. The cool hint of mint will have Jack Frost nipping at your nose, so enjoy this delicious treat by the fire with a warm cup of cocoa.",
-          model: {
-            path: "/static/models/2021/death-by-chocolate-peppermint-cookie.gltf",
-            scale: 1,
-            rotation: {
-              x: 0.4,
-              y: 3.5,
-              z: 0.4,
-            },
-          },
-          refrigerationRecommended: false,
-          stephensFavorite: true,
-          curtsFavorite: false,
-          recipe: `
+  },
+  {
+    name: "Death by Chocolate Peppermint Cookie",
+    slug: "death-by-chocolate-peppermint-cookie",
+    description:
+      "Chocolate lovers rejoice! This chewy double chocolate peppermint cookie will help make your spirit bright this Christmas. The cool hint of mint will have Jack Frost nipping at your nose, so enjoy this delicious treat by the fire with a warm cup of cocoa.",
+    model: {
+      path: "/static/models/2021/death-by-chocolate-peppermint-cookie.gltf",
+      scale: 1,
+      rotation: {
+        x: 0.4,
+        y: 3.5,
+        z: 0.4,
+      },
+    },
+    refrigerationRecommended: false,
+    stephensFavorite: true,
+    curtsFavorite: false,
+    recipe: `
 ## Ingredients
 
 **2 cups** all-purpose flour  
@@ -88,25 +85,25 @@ const desserts = {
 8. Once cookies have completely cooled, they are ready for the white chocolate drizzle. Place chocolate chips and coconut oil in a small pot and place over low heat, stirring until chocolate is melted and smooth. You can also melt the chocolate in the microwave by placing the chocolate in a microwave safe bowl and microwave on high in 30 second intervals, stirring in between, until chocolate is melted. Use a small spoon or pastry bag to drizzle the white chocolate all over the cookies diagonally.
 9. Place cookies back on cooling rack and allow the chocolate to harden completely. Makes around 24 cookies.
 `,
-        },
-        {
-          name: "Chunky Chocolate Peanut Butter Cookie",
-          slug: "chunky-chocolate-peanut-butter-cookie",
-          description:
-            "While the weather outside may be frightful, these chunky chocolate peanut butter cookies are sure to be delightful. With a hint of chocolate in every bite, these peanut butter treats may just have what it takes to become a yuletide cookie treasure.",
-          model: {
-            path: "/static/models/2021/chunky-chocolate-peanut-butter-cookie.gltf",
-            scale: 1,
-            rotation: {
-              x: 0.4,
-              y: 3,
-              z: 0.4,
-            },
-          },
-          refrigerationRecommended: false,
-          stephensFavorite: true,
-          curtsFavorite: false,
-          recipe: `
+  },
+  {
+    name: "Chunky Chocolate Peanut Butter Cookie",
+    slug: "chunky-chocolate-peanut-butter-cookie",
+    description:
+      "While the weather outside may be frightful, these chunky chocolate peanut butter cookies are sure to be delightful. With a hint of chocolate in every bite, these peanut butter treats may just have what it takes to become a yuletide cookie treasure.",
+    model: {
+      path: "/static/models/2021/chunky-chocolate-peanut-butter-cookie.gltf",
+      scale: 1,
+      rotation: {
+        x: 0.4,
+        y: 3,
+        z: 0.4,
+      },
+    },
+    refrigerationRecommended: false,
+    stephensFavorite: true,
+    curtsFavorite: false,
+    recipe: `
 ## Ingredients
 
 **1&frac12; cups** all-purpose flour  
@@ -130,25 +127,25 @@ const desserts = {
 6. Bake for about 9 to 10 minutes or until the edges are lightly golden, let them cool for 5 minutes on a baking sheet and then transfer them to a wire rack to cool completely.  Makes 3 dozen cookies
 
           `,
-        },
-        {
-          name: "Brown Butter Snickerdoodle Cookie",
-          slug: "brown-butter-snickerdoodle-cookie",
-          description:
-            "Jolly Old St. Nick would love to take a bite out of these snickerdoodles with their crunchy exterior and chewy center. The cinnamon sugar coating and caramel-like flavor from the browned butter will be sure to bring you joy this Christmas season.",
-          model: {
-            path: "/static/models/2021/brown-butter-snickerdoodle-cookie.gltf",
-            scale: 1,
-            rotation: {
-              x: 0.4,
-              y: 3,
-              z: 0.4,
-            },
-          },
-          refrigerationRecommended: true,
-          stephensFavorite: false,
-          curtsFavorite: false,
-          recipe: `
+  },
+  {
+    name: "Brown Butter Snickerdoodle Cookie",
+    slug: "brown-butter-snickerdoodle-cookie",
+    description:
+      "Jolly Old St. Nick would love to take a bite out of these snickerdoodles with their crunchy exterior and chewy center. The cinnamon sugar coating and caramel-like flavor from the browned butter will be sure to bring you joy this Christmas season.",
+    model: {
+      path: "/static/models/2021/brown-butter-snickerdoodle-cookie.gltf",
+      scale: 1,
+      rotation: {
+        x: 0.4,
+        y: 3,
+        z: 0.4,
+      },
+    },
+    refrigerationRecommended: true,
+    stephensFavorite: false,
+    curtsFavorite: false,
+    recipe: `
 ## Ingredients
 
 **2&frac12; cups** all-purpose flour  
@@ -180,25 +177,25 @@ const desserts = {
 8. Bake the cookies 8-12 minutes or until the edges of the cookies begin to turn golden brown. They will look a bit underdone in the middle, but will continue to cook once out of the oven. Bake longer if you like crispier cookies.
 9. Cool the cookies on the sheets at least 5 minutes. Remove the cooled cookies from the baking sheets after a few minutes and transfer to a wire rack to cool completely. Repeat with remaining dough. Makes about 24 cookies.
           `,
-        },
-        {
-          name: "Brown Butter Nutella-Stuffed Pumpkin Chocolate Chip Cookie",
-          slug: "brown-butter-nutella-stuffed-pumpkin-chocolate-chip-cookie",
-          description:
-            "‘Tis the season to indulge in these chewy and delicious brown butter pumpkin chocolate chip cookies with a creamy Nutella center. Take one bite and all you’ll want this Christmas is this decadent treat.",
-          model: {
-            path: "/static/models/2021/brown-butter-nutella-stuffed-pumpkin-chocolate-chip-cookie.gltf",
-            scale: 1,
-            rotation: {
-              x: 0.4,
-              y: 3,
-              z: 0.4,
-            },
-          },
-          refrigerationRecommended: false,
-          stephensFavorite: false,
-          curtsFavorite: true,
-          recipe: `
+  },
+  {
+    name: "Brown Butter Nutella-Stuffed Pumpkin Chocolate Chip Cookie",
+    slug: "brown-butter-nutella-stuffed-pumpkin-chocolate-chip-cookie",
+    description:
+      "‘Tis the season to indulge in these chewy and delicious brown butter pumpkin chocolate chip cookies with a creamy Nutella center. Take one bite and all you’ll want this Christmas is this decadent treat.",
+    model: {
+      path: "/static/models/2021/brown-butter-nutella-stuffed-pumpkin-chocolate-chip-cookie.gltf",
+      scale: 1,
+      rotation: {
+        x: 0.4,
+        y: 3,
+        z: 0.4,
+      },
+    },
+    refrigerationRecommended: false,
+    stephensFavorite: false,
+    curtsFavorite: true,
+    recipe: `
 ## Ingredients
 
 **&frac12; cup** unsalted butter  
@@ -230,25 +227,25 @@ const desserts = {
 9. Once ready to bake, preheat oven to 350 degrees F. Bake for 11-13 minutes or until cookies are golden brown around the edges. 
 10. Cool on baking sheet for 5-10 minutes then remove and transfer to wire rack. Makes about 15 cookies.
           `,
-        },
-        {
-          name: "Soft Banana Bread Cookie",
-          slug: "soft-banana-bread-cookie",
-          description:
-            "One bite of this soft banana bread cookie and your taste buds will be aglow. You’ll come to adore these small cookie treats topped with a luscious cream cheese frosting during this most wonderful time of the year.",
-          model: {
-            path: "/static/models/2021/soft-banana-bread-cookie.gltf",
-            scale: 1.25,
-            rotation: {
-              x: 0.4,
-              y: 3,
-              z: 0.4,
-            },
-          },
-          refrigerationRecommended: true,
-          stephensFavorite: true,
-          curtsFavorite: false,
-          recipe: `
+  },
+  {
+    name: "Soft Banana Bread Cookie",
+    slug: "soft-banana-bread-cookie",
+    description:
+      "One bite of this soft banana bread cookie and your taste buds will be aglow. You’ll come to adore these small cookie treats topped with a luscious cream cheese frosting during this most wonderful time of the year.",
+    model: {
+      path: "/static/models/2021/soft-banana-bread-cookie.gltf",
+      scale: 1.25,
+      rotation: {
+        x: 0.4,
+        y: 3,
+        z: 0.4,
+      },
+    },
+    refrigerationRecommended: true,
+    stephensFavorite: true,
+    curtsFavorite: false,
+    recipe: `
 ## Ingredients
 
 **2 tbsp** unsalted butter, melted and slighly cooled  
@@ -277,10 +274,5 @@ const desserts = {
 4. Remove from oven, allow cookies to firm up on baking sheet for 5-10 minutes, then transfer to a wire rack and allow cookies to cool completely before frosting. Makes about 12-14 cookies.
 5. For the frosting: In a medium bowl or bowl of an electric mixer, mix together the powdered sugar, cream cheese, softened butter and vanilla extract. If frosting is too thick, you can add a teaspoon of milk to make it spreadable. Frost the top of each cookie.
           `,
-        },
-      ] as Dessert[],
-    },
   },
-};
-
-export default desserts;
+] as Dessert[];
