@@ -61,7 +61,7 @@ export default function DessertSwiper() {
       className="flex sm:h-screen items-center my-2"
       style={
         {
-          "--swiper-pagination-color": tailwind.theme.colors.amber[700],
+          "--swiper-pagination-color": tailwind.theme.colors["amber"][700],
         } as React.CSSProperties
       }
     >
