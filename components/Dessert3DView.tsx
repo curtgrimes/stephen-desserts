@@ -34,7 +34,7 @@ export default function Dessert3DView({
   useWillUnmount(() => {
     resizeObserver.disconnect();
     intersectionObserver.disconnect();
-    dessertRender.current.destroy();
+    dessertRender.current?.destroy();
   });
 
   useEffect(() => {

@@ -67,8 +67,11 @@ export default function DessertDescription({
           <ChevronLeftIcon />
         </button>
         {dessert.recipe && (
-          <Link href={`/${router.query.year}/${dessert.slug}/recipe`}>
-            <a className="button swiper-no-swiping w-full">View Recipe</a>
+          <Link
+            href={`/${router.query.year}/${dessert.slug}/recipe`}
+            className="button swiper-no-swiping w-full"
+          >
+            View Recipe
           </Link>
         )}
         <button

@@ -50,7 +50,9 @@ export default function DessertSwiper() {
 
   const previousDessertSlug = usePreviousDifferent(currentDessertSlug);
   useEffect(() => {
-    swiper?.slideTo(getCardIndex(currentDessertSlug));
+    if (!swiper?.destroyed) {
+      swiper?.slideTo(getCardIndex(currentDessertSlug));
+    }
   }, [previousDessertSlug, swiper, getCardIndex, currentDessertSlug]);
 
   return (
