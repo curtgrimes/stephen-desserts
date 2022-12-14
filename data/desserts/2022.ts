@@ -19,4 +19,22 @@ export default [
     curtsFavorite: false,
     recipe: ``,
   },
+  {
+    name: "Dessert 2",
+    slug: "dessert-2",
+    description: "",
+    model: {
+      path: "/static/models/2022/dessert2.gltf",
+      scale: 1,
+      rotation: {
+        x: 0,
+        y: 1.75,
+        z: 0,
+      },
+    },
+    refrigerationRecommended: false,
+    stephensFavorite: false,
+    curtsFavorite: false,
+    recipe: ``,
+  },
 ] as Dessert[];
