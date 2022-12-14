@@ -88,11 +88,12 @@ export default function DessertSwiper() {
         onSlideChange={onSlideChange}
         initialSlide={getCardIndex(currentDessertSlug)}
         centeredSlides={true}
-        className="h-full"
+        className="h-full w-full"
       >
         <SwiperSlide key="introduction">
           <IntroductionCard
             onNavigateToFirstDessert={() => swiper?.slideTo(1)}
+            year={router.query.year}
           />
         </SwiperSlide>
         {desserts.map((dessert, index) => (

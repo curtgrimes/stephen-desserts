@@ -8,7 +8,12 @@
   "plugins": ["tailwindcss"],
   "settings": {
     "tailwindcss": {
-      "whitelist": ["swiper-no-swiping"]
+      "whitelist": [
+        "swiper-no-swiping",
+        "device-touchscreen",
+        "device-not-touchscreen",
+        "button"
+      ]
     }
   }
 }

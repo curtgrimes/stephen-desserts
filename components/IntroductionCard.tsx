@@ -1,3 +1,4 @@
+import Link from "next/link";
 import {
   FaChevronRight,
   FaHeart as HeartIcon,
@@ -5,12 +6,12 @@ import {
 } from "react-icons/fa";
 import { WiSnowflakeCold as SnowflakeIcon } from "react-icons/wi";
 
-export default function IntroductionCard({ onNavigateToFirstDessert }) {
+export default function IntroductionCard({ onNavigateToFirstDessert, year }) {
   return (
     <div className="mb-10 flex w-full flex-col items-center justify-center">
-      <div className="relative flex h-full w-full flex-col items-center justify-center rounded-3xl bg-amber-800 bg-opacity-10 p-10 text-center shadow-inner">
+      <div className="relative flex h-full w-full flex-col items-center justify-center rounded-3xl bg-amber-800/10 p-10 text-center shadow-inner">
         <p className="text-xs font-black uppercase tracking-veryWide">
-          December 2021
+          December {year}
         </p>
         <h1 className="text-2xl text-amber-600">
           Stephen&apos;s Desserts,
@@ -37,6 +38,14 @@ export default function IntroductionCard({ onNavigateToFirstDessert }) {
             <FaChevronRight />
           </button>
         </p>
+        {year === "2022" && (
+          <Link
+            href="/2021/about"
+            className="button rounded py-2 px-3 text-sm opacity-90"
+          >
+            View last year&apos;s desserts
+          </Link>
+        )}
         <p className="absolute inset-x-8 bottom-2 text-sm opacity-70">
           Made with <HeartIcon className="inline text-red-600" />{" "}
           <span className="whitespace-nowrap">by Stephen and Curt</span>
