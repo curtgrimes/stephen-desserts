@@ -1,8 +1,7 @@
-import { useEffect, useRef, useState, useMemo } from "react";
 import { Dessert } from "interfaces";
+import { useEffect, useRef, useState } from "react";
 import { useDidMount, useWillUnmount } from "rooks";
 import { DessertRenderer } from "./DessertRenderer";
-import React from "react";
 
 export default function Dessert3DView({
   dessert,

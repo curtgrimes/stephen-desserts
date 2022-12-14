@@ -1,15 +1,15 @@
 import { Dessert } from "interfaces";
 import { useRouter } from "next/dist/client/router";
-import Note from "./Note";
 import Link from "next/link";
-import { CgSmartHomeRefrigerator as RefrigeratorIcon } from "react-icons/cg";
-import { FaHeart as HeartIcon } from "react-icons/fa";
 import { useEffect, useRef, useState } from "react";
-import { useIntersectionObserverRef } from "rooks";
+import { CgSmartHomeRefrigerator as RefrigeratorIcon } from "react-icons/cg";
 import {
   FaChevronLeft as ChevronLeftIcon,
   FaChevronRight as ChevronRightIcon,
+  FaHeart as HeartIcon,
 } from "react-icons/fa";
+import { useIntersectionObserverRef } from "rooks";
+import Note from "./Note";
 
 export default function DessertDescription({
   dessert,
@@ -40,7 +40,7 @@ export default function DessertDescription({
   return (
     <div
       ref={descriptionElementRef}
-      className="bg-white p-7 h-2/3 text-amber-700 rounded-b-3xl flex flex-col"
+      className="flex h-2/3 flex-col rounded-b-3xl bg-white p-7 text-amber-700"
       style={{ overscrollBehaviorY: "none" }}
     >
       <div className="overflow-y-auto" ref={visibilityRef}>
@@ -59,7 +59,7 @@ export default function DessertDescription({
           <Note icon={HeartIcon}>Curt&apos;s personal favorite</Note>
         )}
       </div>
-      <div className="flex mt-auto pt-4 gap-x-2">
+      <div className="mt-auto flex gap-x-2 pt-4">
         <button
           onClick={() => onNavigateToPreviousSlide()}
           className="device-not-touchscreen button w-1/4 opacity-60 hover:opacity-100"

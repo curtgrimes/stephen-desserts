@@ -1,19 +1,19 @@
+import { Dessert } from "interfaces";
+import { MutableRefObject } from "react";
 import {
-  WebGLRenderer,
-  Scene,
-  PerspectiveCamera,
-  Group,
-  sRGBEncoding,
-  PMREMGenerator,
-  MathUtils,
   Cache,
+  Group,
+  MathUtils,
+  PerspectiveCamera,
+  PMREMGenerator,
+  Scene,
+  sRGBEncoding,
+  WebGLRenderer,
 } from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { RoomEnvironment } from "three/examples/jsm/environments/RoomEnvironment.js";
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader.js";
-import { MutableRefObject } from "react";
-import { Dessert } from "interfaces";
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
 interface DessertRendererOptions {
   doInitialSpin?: boolean;

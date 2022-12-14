@@ -2,6 +2,13 @@
   "extends": [
     "next/core-web-vitals",
     "plugin:react-hooks/recommended",
-    "prettier"
-  ]
+    "prettier",
+    "plugin:tailwindcss/recommended"
+  ],
+  "plugins": ["tailwindcss"],
+  "settings": {
+    "tailwindcss": {
+      "whitelist": ["swiper-no-swiping"]
+    }
+  }
 }

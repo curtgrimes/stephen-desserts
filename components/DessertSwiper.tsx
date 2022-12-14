@@ -1,16 +1,16 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperClass, { Pagination } from "swiper";
-import { useDesserts } from "hooks/useDesserts";
-import "swiper/css";
-import "swiper/css/pagination";
 import DessertCard from "components/DessertCard";
 import IntroductionCard from "components/IntroductionCard";
+import { useDesserts } from "hooks/useDesserts";
+import { Dessert } from "interfaces";
 import { useRouter } from "next/router";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { usePreviousDifferent } from "rooks";
-import { Dessert } from "interfaces";
-import resolveConfig from "tailwindcss/resolveConfig";
+import SwiperClass, { Pagination } from "swiper";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Swiper, SwiperSlide } from "swiper/react";
 import tailwindConfig from "tailwind.config.js";
+import resolveConfig from "tailwindcss/resolveConfig";
 
 const tailwind = resolveConfig(tailwindConfig);
 
@@ -58,7 +58,7 @@ export default function DessertSwiper() {
   return (
     <div
       key="dessertSwiper"
-      className="flex items-center h-[100svh] py-1"
+      className="flex h-[100svh] items-center py-1"
       style={
         {
           "--swiper-pagination-color": tailwind.theme.colors["amber"][700],

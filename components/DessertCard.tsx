@@ -1,6 +1,6 @@
-import { Dessert } from "interfaces";
 import Dessert3DView from "components/Dessert3DView";
 import DessertDescription from "components/DessertDescription";
+import { Dessert } from "interfaces";
 
 export default function DessertCard({
   dessert,
@@ -14,7 +14,7 @@ export default function DessertCard({
   isLast: boolean;
 }) {
   return (
-    <div className="mb-10 w-full cursor-grab bg-orange-50 rounded-3xl shadow-xl flex flex-col relative overflow-hidden">
+    <div className="relative mb-10 flex w-full cursor-grab flex-col overflow-hidden rounded-3xl bg-orange-50 shadow-xl">
       <div className="h-1/3">
         <Dessert3DView dessert={dessert} />
       </div>
