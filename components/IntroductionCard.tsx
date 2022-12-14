@@ -41,7 +41,7 @@ export default function IntroductionCard({ onNavigateToFirstDessert, year }) {
         {year === "2022" && (
           <Link
             href="/2021/about"
-            className="button rounded py-2 px-3 text-sm opacity-90"
+            className="button mt-3 rounded py-2 px-3 text-sm opacity-90"
           >
             View last year&apos;s desserts
           </Link>
