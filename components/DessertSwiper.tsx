@@ -58,7 +58,7 @@ export default function DessertSwiper() {
   return (
     <div
       key="dessertSwiper"
-      className="flex sm:h-screen items-center my-2"
+      className="flex items-center h-[100svh] py-1"
       style={
         {
           "--swiper-pagination-color": tailwind.theme.colors["amber"][700],
@@ -69,7 +69,7 @@ export default function DessertSwiper() {
         onSwiper={setSwiper}
         modules={[Pagination]}
         slidesPerView={1.15}
-        spaceBetween={0}
+        spaceBetween={10}
         breakpoints={{
           650: {
             // when screen is >= 650
@@ -88,6 +88,7 @@ export default function DessertSwiper() {
         onSlideChange={onSlideChange}
         initialSlide={getCardIndex(currentDessertSlug)}
         centeredSlides={true}
+        className="h-full"
       >
         <SwiperSlide key="introduction">
           <IntroductionCard

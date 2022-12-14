@@ -9,7 +9,7 @@ import { useDesserts } from "hooks/useDesserts";
 
 export default function IntroductionCard({ onNavigateToFirstDessert }) {
   return (
-    <div className="h-card w-full flex flex-col items-center justify-center px-1 pb-11">
+    <div className="w-full flex flex-col items-center justify-center mb-10">
       <div className="h-full w-full bg-amber-800 rounded-3xl shadow-inner bg-opacity-10 flex flex-col relative items-center justify-center text-center p-10">
         <p className="uppercase tracking-veryWide font-black text-xs">
           December 2021

@@ -14,18 +14,16 @@ export default function DessertCard({
   isLast: boolean;
 }) {
   return (
-    <div className="h-card px-1 pb-11 w-full cursor-grab">
-      <div className="h-full w-full bg-orange-50 rounded-3xl shadow-xl flex flex-col relative overflow-hidden">
-        <div className="h-1/3">
-          <Dessert3DView dessert={dessert} />
-        </div>
-        <DessertDescription
-          dessert={dessert}
-          onNavigateToPreviousSlide={onNavigateToPreviousSlide}
-          onNavigateToNextSlide={onNavigateToNextSlide}
-          isLast={isLast}
-        />
+    <div className="mb-10 w-full cursor-grab bg-orange-50 rounded-3xl shadow-xl flex flex-col relative overflow-hidden">
+      <div className="h-1/3">
+        <Dessert3DView dessert={dessert} />
       </div>
+      <DessertDescription
+        dessert={dessert}
+        onNavigateToPreviousSlide={onNavigateToPreviousSlide}
+        onNavigateToNextSlide={onNavigateToNextSlide}
+        isLast={isLast}
+      />
     </div>
   );
 }
