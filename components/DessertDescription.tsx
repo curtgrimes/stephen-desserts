@@ -59,7 +59,7 @@ export default function DessertDescription({
           <Note icon={HeartIcon}>Curt&apos;s personal favorite</Note>
         )}
       </div>
-      <div className="mt-auto flex gap-x-2 pt-4">
+      <div className="mt-auto flex justify-between gap-x-2 pt-4">
         <button
           onClick={() => onNavigateToPreviousSlide()}
           className="device-not-touchscreen button w-1/4 opacity-60 hover:opacity-100"
