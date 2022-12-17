@@ -138,7 +138,7 @@ export default [
     description:
       "Christmas cookies and happy hearts, this is how the holiday starts! These Italian chocolate orange cookies will satisfy your chocolate craving and start your holiday celebrations off with a burst of orange citrus flavor. While they aren’t “Fra-gee-lay”, they are Italian.",
     model: {
-      path: "/static/models/2021/chunky-chocolate-peanut-butter-cookie.gltf",
+      path: "/static/models/2022/italian-chocolate-orange-cookie.gltf",
       scale: 1,
       rotation: {
         x: 0.4,
