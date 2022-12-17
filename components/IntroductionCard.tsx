@@ -38,14 +38,16 @@ export default function IntroductionCard({ onNavigateToFirstDessert, year }) {
             <FaChevronRight />
           </button>
         </p>
-        {year === "2022" && (
-          <Link
-            href="/2021/about"
-            className="button mt-3 rounded py-2 px-3 text-sm opacity-90"
-          >
-            View last year&apos;s desserts
-          </Link>
-        )}
+        <Link
+          href={
+            year === "2022"
+              ? "/2021/chocolate-pretzel-rice-crispy"
+              : "/2022/chocolate-mint-stuffed-cookie"
+          }
+          className="button mt-3 rounded py-2 px-3 text-sm opacity-90"
+        >
+          View {year === "2022" ? "last" : "this"} year&apos;s desserts
+        </Link>
         <p className="absolute inset-x-8 bottom-2 text-sm opacity-70">
           Made with <HeartIcon className="inline text-red-600" />{" "}
           <span className="whitespace-nowrap">by Stephen and Curt</span>
