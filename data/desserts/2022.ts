@@ -234,12 +234,12 @@ until incorporated. Slowly add flour mixture and mix until just combined, about 
     description:
       "Sugar, spice and everything nice are packed inside these small Pfeffernüsse cookies to make your spirit bright. This German yuletide treat, with its wintery spices and a lemony glaze, will have you dreaming of a white Christmas this year.",
     model: {
-      path: "/static/models/2021/chunky-chocolate-peanut-butter-cookie.gltf",
-      scale: 1,
+      path: "/static/models/2022/pfeffernusse.gltf",
+      scale: 1.25,
       rotation: {
-        x: 0.4,
+        x: 0,
         y: 3,
-        z: 0.4,
+        z: 0.3,
       },
     },
     refrigerationRecommended: false,
