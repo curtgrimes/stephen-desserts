@@ -188,16 +188,16 @@ Zest from 1 medium orange
   },
   {
     name: "Mini Pumpkin Whoopie Pie",
-    slug: "mini-pumpkin-whoppie-pie",
+    slug: "mini-pumpkin-whoopie-pie",
     description:
       "Naughty or nice, Christmas comes but once a year, so feel no guilt when unwrapping this bundle of joy. Don’t be fooled by these mini pumpkin whoopie pies as they pack a lot of flavor in such a small bite. Your taste buds are sure to be all aglow!",
     model: {
-      path: "/static/models/2021/chunky-chocolate-peanut-butter-cookie.gltf",
-      scale: 1,
+      path: "/static/models/2022/mini-pumpkin-whoopie-pie.gltf",
+      scale: 1.15,
       rotation: {
-        x: 0.4,
-        y: 3,
-        z: 0.4,
+        x: 0,
+        y: 0,
+        z: 0.5,
       },
     },
     refrigerationRecommended: true,
