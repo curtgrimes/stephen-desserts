@@ -93,12 +93,12 @@ export default [
     description:
       "What a wonderful time of the year when the the smells of gingerbread fill the air. Enjoy these spicy, sweet, and delicious ginger cookies made with browned butter to add a caramel-like flavor that will surely add some warmth and magic to your holidays.",
     model: {
-      path: "/static/models/2021/chunky-chocolate-peanut-butter-cookie.gltf",
+      path: "/static/models/2022/brown-butter-ginger-cookie.gltf",
       scale: 1,
       rotation: {
-        x: 0.4,
-        y: 3,
-        z: 0.4,
+        x: 0,
+        y: 0,
+        z: 0.7,
       },
     },
     refrigerationRecommended: false,
