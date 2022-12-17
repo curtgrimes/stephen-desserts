@@ -28,7 +28,7 @@ export default [
 **2** large eggs  
 **&frac12; tsp** salt  
 **&frac12; tsp** baking soda  
-**12** Andes chocolate mints, broken in half  
+**24** Andes chocolate mints  
 
 ## Directions
 
