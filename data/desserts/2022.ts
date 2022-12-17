@@ -16,8 +16,8 @@ export default [
       },
     },
     refrigerationRecommended: false,
-    stephensFavorite: false,
-    curtsFavorite: true,
+    stephensFavorite: true,
+    curtsFavorite: false,
     recipe: `
 ## Ingredients
 
@@ -60,7 +60,7 @@ export default [
     recipe: `
 ## Ingredients
 
-### Cookies
+**Cookies:**  
 **1 &frac14; cups** dry roasted peanuts, unsalted  
 **&frac34; cup** all-purpose flour  
 **1 tsp** baking soda  
@@ -72,7 +72,7 @@ export default [
 **3 Tbsp** milk  
 **1** large egg  
 
-### Filling
+**Filling:**  
 **&frac34; cup** creamy peanut butter  
 **3 Tbsp** unsalted butter  
 **1 cup** powdered sugar  
@@ -115,7 +115,7 @@ export default [
 **1 tsp** allspice  
 **&frac34; cup** butter  
 **1 cup** dark brown sugar, packed  
-**1** egg 
+**1** egg  
 **1 tsp** vanilla extract  
 **&frac14; cup** molasses  
 **&frac14; cup** granulated sugar for rolling  
@@ -130,6 +130,158 @@ export default [
 6. Preheat the oven to 350 degrees F. Grab a large tablespoon or so of dough and roll into a ball then roll in sugar. Place dough balls on cookie sheet. Bake 10-12 minutes.
 7. Remove from oven and cool the cookies on sheets about 2 minutes then transfer to a wire rack. Repeat with remaining dough. Makes 20-22 cookies.
 
+          `,
+  },
+  {
+    name: "Italian Chocolate Orange Cookie",
+    slug: "italian-chocolate-orange-cookie",
+    description:
+      "Christmas cookies and happy hearts, this is how the holiday starts! These Italian chocolate orange cookies will satisfy your chocolate craving and start your holiday celebrations off with a burst of orange citrus flavor. While they aren’t “Fra-gee-lay”, they are Italian.",
+    model: {
+      path: "/static/models/2021/chunky-chocolate-peanut-butter-cookie.gltf",
+      scale: 1,
+      rotation: {
+        x: 0.4,
+        y: 3,
+        z: 0.4,
+      },
+    },
+    refrigerationRecommended: false,
+    stephensFavorite: false,
+    curtsFavorite: false,
+    recipe: `
+## Ingredients
+
+**Wet ingredients:**  
+**6 Tbsp** butter, softened  
+**&frac12; cup** granulated sugar  
+Zest from 1 medium orange  
+**1** egg, room temperature  
+**1 tsp** vanilla extract  
+
+**Dry ingredients:**  
+**1 cup** all-purpose flour  
+**&frac14; cup** unsweetened cocoa powder  
+**1 tsp** baking powder  
+**&frac14; tsp** salt  
+**&frac12; tsp** cinnamon  
+**&frac14; tsp** allspice  
+
+**Icing:**  
+**&frac12; cup** powdered sugar  
+**1 Tbsp** fresh orange juice  
+**1 tsp** orange zest  
+**1 Tbsp** melted butter  
+**1 Tbsp** cream cheese, softened  
+
+
+## Directions
+
+1. Preheat oven to 350 degrees. Line a large baking sheet with parchment paper.
+2. In the bowl of an electric mixer, cream together the butter, sugar and orange zest for 1 minute until well combined. Turn mixer to medium-low speed and add in egg (make sure it’s at room temp -- you can do this by running the egg under warm water for 1 min); beating until well combined. Next beat in the vanilla extract.
+3. In a medium bowl, whisk together flour, cocoa powder, baking powder, salt, cinnamon and allspice. Add dry ingredients to wet ingredients and mix together on medium-low speed until just combined.
+4. Use hands to grab one heaping tablespoon full of dough and roll into a ball. Place on baking sheet about 2 inches apart. Slightly flatten cookies with the palm of your hand so they are about ¼ inch thick. (If you like very fat, puffy cookies, no need to flatten them at all.) Bake for 10-13 minutes until just barely golden brown on the edges.
+5. Remove and allow to cool on baking sheet for a few minutes before transferring to a wire rack to finish cooling completely. Repeat with remaining dough.
+6. Once cookies have cooled, make the icing: add the powdered sugar, orange juice, zest, melted butter and softened cream cheese to a bowl. Spoon the icing onto the cookies or you can dip of the top of the cookies in the icing then place back on the wire rack to allow icing to harden. Makes about 14 cookies.
+
+          `,
+  },
+  {
+    name: "Mini Pumpkin Whoopie Pie",
+    slug: "mini-pumpkin-whoppie-pie",
+    description:
+      "Naughty or nice, Christmas comes but once a year, so feel no guilt when unwrapping this bundle of joy. Don’t be fooled by these mini pumpkin whoopie pies as they pack a lot of flavor in such a small bite. Your taste buds are sure to be all aglow!",
+    model: {
+      path: "/static/models/2021/chunky-chocolate-peanut-butter-cookie.gltf",
+      scale: 1,
+      rotation: {
+        x: 0.4,
+        y: 3,
+        z: 0.4,
+      },
+    },
+    refrigerationRecommended: true,
+    stephensFavorite: true,
+    curtsFavorite: false,
+    recipe: `
+## Ingredients
+
+**1 cup** all-purpose flour  
+**1 &frac12; tsp** pumpkin pie spice  
+**1 tsp** baking soda  
+**&frac34; tsp** salt  
+**2** large eggs  
+**&frac34; cup** granulated sugar  
+**1 cup** canned unsweetened pumpkin puree  
+**6 Tbsp** unsalted butter, melted and cooled  
+**4 Tbsp** unsalted butter, softened  
+**1 cup** powdered sugar  
+**4 oz** cream cheese, cut into 4 pieces and softened
+
+
+## Directions
+
+1. Preheat oven to 350 degrees. Line a large baking sheet with parchment paper.
+2. Whisk flour, pumpkin pie spice, baking soda, and salt together in medium bowl. Using stand mixer fitted with whisk, whip eggs and granulated sugar on medium-high speed until pale and fluffy, about 3 minutes. Reduce speed to low, add pumpkin and melted butter, and mix
+until incorporated. Slowly add flour mixture and mix until just combined, about 30 seconds.
+3. Using a 1-tablespoon cookie scoop, drop batter onto cookie sheet, spacing them about 1 inch apart. Bake until cakes are set, 10 to 12 minutes, rotating sheet halfway through baking. Let cakes cool on sheet for 5 minutes, then transfer to wire rack. Let cakes cool completely.
+4. Using clean, dry bowl and whisk attachment, whip softened butter and confectioners' sugar on medium-high speed until pale and fluffy, about 2 minutes. Add cream cheese, 1 piece at a time, and mix until no lumps remain. Spread scant tablespoon filling over bottom of half of cakes, then top with remaining cakes, pressing lightly to adhere. Makes around 24 whoopie pies.
+          `,
+  },
+  {
+    name: "Pfeffernüsse",
+    slug: "pfeffernusse",
+    description:
+      "Sugar, spice and everything nice are packed inside these small Pfeffernüsse cookies to make your spirit bright. This German yuletide treat, with its wintery spices and a lemony glaze, will have you dreaming of a white Christmas this year.",
+    model: {
+      path: "/static/models/2021/chunky-chocolate-peanut-butter-cookie.gltf",
+      scale: 1,
+      rotation: {
+        x: 0.4,
+        y: 3,
+        z: 0.4,
+      },
+    },
+    refrigerationRecommended: false,
+    stephensFavorite: false,
+    curtsFavorite: false,
+    recipe: `
+## Ingredients
+
+**Cookies:**  
+**&frac13; cup** granulated sugar  
+**&frac14; cup** brown sugar, packed  
+**&frac14; cup** honey  
+**1 Tbsp** water  
+**1 tsp** cinnamon  
+**&frac34; tsp** ginger  
+**&frac12; tsp** cardamom  
+**&frac14; tsp** nutmeg  
+**&frac14; tsp** allspice  
+**&frac14; tsp** cloves  
+**&frac18; tsp** cayenne pepper  
+**&frac12; Tbsp** kosher salt  
+**1 tsp** baking soda  
+**2 Tbsp** heavy cream  
+**1** large egg  
+**2 &frac12; cups** all-purpose flour  
+
+**Icing:**  
+**3 cups** powdered sugar  
+**3 Tbsp** lemon juice  
+
+
+## Directions
+
+1. Combine white and brown sugars in a saucepan with honey, water, cinnamon, ginger, cardamom, nutmeg, allspice, cloves, and cayenne pepper. Place over medium heat and whisk until the sugars dissolve and it just starts to simmer, 1 to 2 minutes. Immediately remove from the heat and let cool for 4 to 5 minutes.
+2. Add salt, baking soda, heavy cream, and egg and whisk until thoroughly combined. Add flour and stir together with a wooden spoon until everything comes together as a dough.
+3. Transfer dough to a piece of plastic wrap. Press into a ball and wrap tightly. Place in the refrigerator and let rest for 1 to 2 days.
+4. When ready to bake, preheat the oven to 375 degrees. Line baking sheet with parchment paper.
+5. Remove dough from the refrigerator and scoop into rounded teaspoons. Roll each one into a smooth ball if desired, and place on a prepared baking sheet.
+6. Bake in the center of the preheated oven until cookies are perfectly dome-shaped with light golden brown bottoms, 9 to 10 minutes; don't overbake. Let cool on the pan all the way down to room temperature, 20 to 30 minutes.
+7. While the cookies are cooling, repeat Steps 5 and 6 to shape and bake the remaining cookies.
+8. Make icing by placing powdered sugar in a bowl. Stir in lemon juice, a few teaspoons at a time, until icing is very thick, but still slightly runny.
+9. Dip the top of each cooled cookie into the icing. Let it drip, then flip it over and place on a wire rack set over a piece of parchment paper and let harden. Makes around 50 cookies.
           `,
   },
 ] as Dessert[];
