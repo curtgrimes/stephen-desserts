@@ -2,23 +2,23 @@ import { Dessert } from "interfaces";
 
 export default [
   {
-          name: "Chocolate Mint Stuffed Cookie",
-          slug: "chocolate-mint-stuffed-cookie",
-          description:
-            "’Tis the season to be jolly over these chocolate mint stuffed cookies. This decadent chocolate treat will help to keep your days merry and bright with a cool minty center nipping at your nose. Pair these festive cookies with a hot cup of cocoa by the fire.",
-          model: {
-            path: "/static/models/2021/chocolate-pretzel-rice-crispy.gltf",
-            scale: 0.08,
-            rotation: {
-              x: 0.3,
-              y: 1,
-              z: 0.4,
-            },
-          },
-          refrigerationRecommended: false,
-          stephensFavorite: false,
-          curtsFavorite: true,
-          recipe: `
+    name: "Chocolate Mint Stuffed Cookie",
+    slug: "chocolate-mint-stuffed-cookie",
+    description:
+      "’Tis the season to be jolly over these chocolate mint stuffed cookies. This decadent chocolate treat will help to keep your days merry and bright with a cool minty center nipping at your nose. Pair these festive cookies with a hot cup of cocoa by the fire.",
+    model: {
+      path: "/static/models/2022/chocolate-mint-stuffed-cookie.gltf",
+      scale: 1,
+      rotation: {
+        x: 0,
+        y: 1.75,
+        z: 0,
+      },
+    },
+    refrigerationRecommended: false,
+    stephensFavorite: false,
+    curtsFavorite: true,
+    recipe: `
 ## Ingredients
 
 **1 &frac12; cups** all-purpose flour  
@@ -39,25 +39,25 @@ export default [
 5. Using a cookie scoop the size of one tablespoon, scoop out your dough, flatten it in your hands, place half of an Andies mint chocolate in the center of each one and carefully seal the dough around it. 
 6. Place them a couple of inches apart on your prepared baking sheet and bake the cookies for about 10 to 12 minutes or until set around the edges, allow them to cool a bit before serving. Repeat with remaining cookies. Makes around 24 cookies.
 `,
-        },
-        {
-          name: "Peanut Butter Sandwich Cookies",
-          slug: "peanut-butter-sandwhich-cookie",
-          description:
-            "Peanut butter lovers rejoice! Chestnuts aren’t the only nut roasting on an open fire. After taking a bite out of these crunchy peanut butter sandwich cookies with its creamy peanut butter center, Jolly Old St. Nick won’t be the only one craving a cold glass of milk.",
-          model: {
-            path: "/static/models/2021/death-by-chocolate-peppermint-cookie.gltf",
-            scale: 1,
-            rotation: {
-              x: 0.4,
-              y: 3.5,
-              z: 0.4,
-            },
-          },
-          refrigerationRecommended: false,
-          stephensFavorite: true,
-          curtsFavorite: false,
-          recipe: `
+  },
+  {
+    name: "Peanut Butter Sandwich Cookies",
+    slug: "peanut-butter-sandwich-cookie",
+    description:
+      "Peanut butter lovers rejoice! Chestnuts aren’t the only nut roasting on an open fire. After taking a bite out of these crunchy peanut butter sandwich cookies with its creamy peanut butter center, Jolly Old St. Nick won’t be the only one craving a cold glass of milk.",
+    model: {
+      path: "/static/models/2022/peanut-butter-sandwich-cookie.gltf",
+      scale: 1,
+      rotation: {
+        x: 0.1,
+        y: 3.5,
+        z: 0.3,
+      },
+    },
+    refrigerationRecommended: false,
+    stephensFavorite: true,
+    curtsFavorite: false,
+    recipe: `
 ## Ingredients
 
 ### Cookies
@@ -86,7 +86,7 @@ export default [
 5. To make the filling, microwave peanut butter and butter until butter is melted and warm, about 40 seconds. Using rubber spatula, stir in powdered sugar until combined.
 5. To assemble, place half the cookies upside down on work surface. Place 1 level tablespoon of the warm filling in the center of each cookie. Place an unflipped cookie on top of filling, right side up, pressing gently until filling spreads to edges. Allow filling to set for 1 hour before serving. Makes around 24 cookies.
 `,
-        },
+  },
   {
     name: "Brown Butter Ginger Cookie",
     slug: "brown-butter-ginger-cookie",
