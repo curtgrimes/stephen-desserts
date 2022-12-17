@@ -17,7 +17,7 @@ export default [
     },
     refrigerationRecommended: false,
     stephensFavorite: true,
-    curtsFavorite: false,
+    curtsFavorite: true,
     recipe: `
 ## Ingredients
 
