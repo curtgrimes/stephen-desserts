@@ -47,7 +47,7 @@
 
 .swiper-slide {
   height: auto !important;
-  @apply flex;
+  display: flex !important;
 }
 
 @media print {
