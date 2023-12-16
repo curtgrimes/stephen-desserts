@@ -20,11 +20,11 @@ export default [
     recipe: ``,
   },
   {
-    name: "Peppermint Snowball Cookies",
-    slug: "peppermint-snowball-cookies",
+    name: "Peppermint Snowballs",
+    slug: "peppermint-snowballs",
     description: "",
     model: {
-      path: "/static/models/2023/peppermint-snowball-cookies.gltf",
+      path: "/static/models/2023/peppermint-snowballs.gltf",
       scale: 1,
       rotation: {
         x: 0,
@@ -38,11 +38,11 @@ export default [
     recipe: ``,
   },
   {
-    name: "Maple Brown Sugar Cookies",
-    slug: "maple-brown-sugar-cookies",
+    name: "Maple Brown Sugar",
+    slug: "maple-brown-sugar",
     description: "",
     model: {
-      path: "/static/models/2023/maple-brown-sugar-cookies.gltf",
+      path: "/static/models/2023/maple-brown-sugar.gltf",
       scale: 1,
       rotation: {
         x: 0,
@@ -56,11 +56,11 @@ export default [
     recipe: ``,
   },
   {
-    name: "Cookies & Cream Cookies",
-    slug: "cookies-and-cream-cookies",
+    name: "Cookies & Cream",
+    slug: "cookies-and-cream",
     description: "",
     model: {
-      path: "/static/models/2023/cookies-and-cream-cookies.gltf",
+      path: "/static/models/2023/cookies-and-cream.gltf",
       scale: 1,
       rotation: {
         x: 0,
@@ -92,11 +92,11 @@ export default [
     recipe: ``,
   },
   {
-    name: "Lemon Coconut Drop Shortbread Cookies",
-    slug: "lemon-coconut-drop-shortbread-cookies",
+    name: "Lemon Coconut Drop Shortbread",
+    slug: "lemon-coconut-drop-shortbread",
     description: "",
     model: {
-      path: "/static/models/2023/lemon-coconut-drop-shortbread-cookies.gltf",
+      path: "/static/models/2023/lemon-coconut-drop-shortbread.gltf",
       scale: 1,
       rotation: {
         x: 0,
