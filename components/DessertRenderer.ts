@@ -127,19 +127,23 @@ export class DessertRenderer {
       DessertRenderer.loader.setDRACOLoader(dracoLoader);
     }
 
-    const gltf = await DessertRenderer.loader.loadAsync(
-      this.dessert.model.path
-    );
-    this.model = gltf.scene;
-    this.model.scale.set(
-      this.dessert.model.scale,
-      this.dessert.model.scale,
-      this.dessert.model.scale
-    );
-    this.model.rotateX(this.dessert.model.rotation.x);
-    this.model.rotateY(this.dessert.model.rotation.y);
-    this.model.rotateZ(this.dessert.model.rotation.z);
-    this.scene.add(this.model);
+    try {
+      this.model = (
+        await DessertRenderer.loader.loadAsync(this.dessert.model.path)
+      ).scene;
+
+      this.model.scale.set(
+        this.dessert.model.scale,
+        this.dessert.model.scale,
+        this.dessert.model.scale
+      );
+      this.model.rotateX(this.dessert.model.rotation.x);
+      this.model.rotateY(this.dessert.model.rotation.y);
+      this.model.rotateZ(this.dessert.model.rotation.z);
+      this.scene.add(this.model);
+    } catch (e) {
+      console.error("Unable to load model:", e);
+    }
 
     if (this.doInitialSpin) {
       // We were already spinning faster at start. Now slow down.
