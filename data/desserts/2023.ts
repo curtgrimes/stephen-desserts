@@ -8,12 +8,13 @@ export default [
       "Dive into holiday delight with these creamy peanut spheres dipped in bittersweet chocolate. Each bite is a festive fusion, marrying peanut richness with chocolate decadence. A treat embodying enchanting seasonal magic.",
     model: {
       path: "/static/models/2023/peanut-butter-balls.gltf",
-      scale: 1,
+      scale: 22,
       rotation: {
         x: 0,
         y: 0,
         z: 0,
       },
+      allowedUserRotation: "horizontal-only",
     },
     refrigerationRecommended: true,
     stephensFavorite: true,
@@ -46,7 +47,7 @@ export default [
       "Step into a frosty wonderland with these buttery, peppermint-laced delights. Each crumb harbors crushed candy cane, a burst of festive cheer. Powdered snow-like sugar crowns these treats, echoing the merry spirit of the season.",
     model: {
       path: "/static/models/2023/peppermint-snowballs.gltf",
-      scale: 1,
+      scale: 40,
       rotation: {
         x: 0,
         y: 0,
@@ -91,12 +92,13 @@ export default [
       "Savor the toasty bliss of a fireside Christmas morning in these cookies. Their blend of dark brown sugar and maple syrup evokes the warmth of the season. Folded with toasted pecans, they mirror crackling fires and winter landscapes, a festive treat in every bite.",
     model: {
       path: "/static/models/2023/maple-brown-sugar.gltf",
-      scale: 1,
+      scale: 20,
       rotation: {
         x: 0,
         y: 0,
         z: 0,
       },
+      allowedUserRotation: "horizontal-only",
     },
     refrigerationRecommended: false,
     stephensFavorite: false,
@@ -142,12 +144,13 @@ export default [
       "Celebrate the festive season with these joyous treats. Within, crushed Oreo delights and white chocolate chips twirl, creating a merry flavor symphony. They encapsulate the Christmas glee in every luxurious nibble.",
     model: {
       path: "/static/models/2023/cookies-and-cream.gltf",
-      scale: 1,
+      scale: 20,
       rotation: {
         x: 0,
         y: 0,
         z: 0,
       },
+      allowedUserRotation: "horizontal-only",
     },
     refrigerationRecommended: false,
     stephensFavorite: true,
@@ -188,12 +191,13 @@ export default [
       "Embrace the comforting charm of a cinnamon-spiced Christmas. Bursting with pumpkin and brown sugar sweetness, these treats exude the cozy essence of the season. Adorned with white chocolate chips, they're a festive indulgence in every bite.",
     model: {
       path: "/static/models/2023/pumpkin-snickerdoodles.gltf",
-      scale: 1,
+      scale: 23,
       rotation: {
         x: 0,
         y: 0,
         z: 0,
       },
+      allowedUserRotation: "horizontal-only",
     },
     refrigerationRecommended: false,
     stephensFavorite: true,
@@ -240,12 +244,13 @@ Squeeze as much of the moisture out of the pumpkin puree as you can before addin
       "Savor the zest of a joyous Christmas in these delightful cookies. Infused with tangy lemon and tropical coconut sweetness, they offer a refreshing essence of the season's cheer. These shortbread wonders capture the festive spirit, a celebration with every nibble.",
     model: {
       path: "/static/models/2023/lemon-coconut-drop-shortbread.gltf",
-      scale: 1,
+      scale: 16,
       rotation: {
         x: 0,
         y: 0,
         z: 0,
       },
+      allowedUserRotation: "horizontal-only",
     },
     refrigerationRecommended: true,
     stephensFavorite: false,

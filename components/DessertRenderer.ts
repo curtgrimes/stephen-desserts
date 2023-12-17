@@ -68,8 +68,8 @@ export class DessertRenderer {
 
   destroy() {
     this.pause();
-    this.renderer.dispose();
-    this.renderer.forceContextLoss();
+    this.renderer?.dispose();
+    this.renderer?.forceContextLoss();
     this.renderer = null;
   }
 
@@ -114,7 +114,10 @@ export class DessertRenderer {
       ? 160
       : this.autoRotateSpeed;
     this.controls.minPolarAngle = 1;
-    this.controls.maxPolarAngle = 2;
+    this.controls.maxPolarAngle =
+      this.dessert.model.allowedUserRotation === "horizontal-only"
+        ? this.controls.minPolarAngle
+        : 2;
   }
 
   static loader: GLTFLoader;
