@@ -53,6 +53,7 @@ export default [
         y: 0,
         z: 0,
       },
+      allowedUserRotation: "horizontal-only",
     },
     refrigerationRecommended: true,
     stephensFavorite: false,
