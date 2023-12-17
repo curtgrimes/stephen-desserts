@@ -3,6 +3,7 @@ import desserts2022 from "./2022";
 import desserts2023 from "./2023";
 
 const desserts = {
+  currentYear: 2023,
   years: {
     2021: {
       desserts: desserts2021,

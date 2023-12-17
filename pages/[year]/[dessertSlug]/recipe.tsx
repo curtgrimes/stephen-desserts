@@ -23,10 +23,10 @@ export default function RecipePage() {
   });
 
   return (
-    <motion.div className="fixed inset-0 z-10 overflow-y-auto bg-black bg-opacity-50 pt-5">
+    <motion.div className="fixed inset-0 z-10 overflow-y-auto bg-black/50 pt-5">
       <div className="mx-1 rounded-t-3xl bg-white">
         <div className="mx-auto max-w-lg p-4">
-          <div className="print-d-none flex text-xs text-gray-400">
+          <div className="flex text-xs text-gray-400 print:hidden">
             <button
               className="flex items-center"
               onClick={() => window.print()}

@@ -1,5 +1,6 @@
 import DessertCard from "components/DessertCard";
 import IntroductionCard from "components/IntroductionCard";
+import OtherYearsCard from "components/OtherYearsCard";
 import { useDesserts } from "hooks/useDesserts";
 import { Dessert } from "interfaces";
 import { useRouter } from "next/router";
@@ -27,11 +28,14 @@ export default function DessertSwiper() {
 
     const dessertIndex = activeIndex - 1; // account for introduction card
 
-    if (dessertIndex >= 0) {
+    if (dessertIndex >= 0 && desserts[dessertIndex]) {
       router.replace(`/${router.query.year}/${desserts[dessertIndex].slug}`);
-    } else {
+    } else if (activeIndex === 0) {
       // Introduction card
       router.replace(`/${router.query.year}/about`);
+    }
+    else {
+      // Year picker card at the end
     }
   };
 
@@ -107,6 +111,9 @@ export default function DessertSwiper() {
             />
           </SwiperSlide>
         ))}
+        <SwiperSlide key="introduction">
+          <OtherYearsCard />
+        </SwiperSlide>
       </Swiper>
     </div>
   );
