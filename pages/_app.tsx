@@ -52,20 +52,6 @@ export default function MyApp({ Component, pageProps }) {
           content="Learn more about the desserts Stephen has made for you this Christmas season. And if you really like one of them, feel free to grab the recipe!"
         />
       </Head>
-      {/* Google Analytics */}
-      <Script
-        src="https://www.googletagmanager.com/gtag/js?id=G-EEFY64ZHCR"
-        strategy="afterInteractive"
-      />
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){window.dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'G-EEFY64ZHCR');
-        `}
-      </Script>
       {getLayout(<Component {...pageProps} />)}
     </>
   );
