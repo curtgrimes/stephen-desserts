@@ -17,19 +17,6 @@ export default function MyApp({ Component, pageProps }) {
   const router = useRouter();
   useEffect(() => storePathValues, [router.asPath]);
 
-  const handleRouteChange = (url) => {
-    window.gtag("config", "[Tracking ID]", {
-      page_path: url,
-    });
-  };
-
-  useEffect(() => {
-    router.events.on("routeChangeComplete", handleRouteChange);
-    return () => {
-      router.events.off("routeChangeComplete", handleRouteChange);
-    };
-  }, [router.events]);
-
   function storePathValues() {
     const storage = globalThis?.sessionStorage;
     if (!storage) return;
