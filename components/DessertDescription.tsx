@@ -23,7 +23,7 @@ export default function DessertDescription({
   isLast: boolean;
 }) {
   const router = useRouter();
-  const descriptionElementRef = useRef();
+  const descriptionElementRef = useRef<HTMLDivElement>(undefined);
   const [isVisible, setIsVisible] = useState(false);
   const [visibilityRef] = useIntersectionObserverRef((entries) => {
     if (entries && entries[0]) {

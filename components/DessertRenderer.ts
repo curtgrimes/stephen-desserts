@@ -7,7 +7,7 @@ import {
   PerspectiveCamera,
   PMREMGenerator,
   Scene,
-  sRGBEncoding,
+  SRGBColorSpace,
   WebGLRenderer,
 } from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
@@ -82,7 +82,7 @@ export class DessertRenderer {
       // https://attackingpixels.com/tips-tricks-optimizing-three-js-performance/
       powerPreference: "high-performance",
     });
-    this.renderer.outputEncoding = sRGBEncoding;
+    this.renderer.outputColorSpace = SRGBColorSpace;
   }
 
   private initializeScene() {
