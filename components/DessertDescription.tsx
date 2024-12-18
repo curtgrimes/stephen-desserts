@@ -44,7 +44,7 @@ export default function DessertDescription({
       style={{ overscrollBehaviorY: "none" }}
     >
       <div className="overflow-y-auto" ref={visibilityRef}>
-        <h1>{dessert.name} {router.query.year !== '2023' && `(${router.query.year})`}</h1>
+        <h1>{dessert.name} {router.query.year !== '2024' && `(${router.query.year})`}</h1>
         <p>{dessert.description}</p>
 
         {dessert.refrigerationRecommended && (

@@ -1,4 +1,18 @@
-# Convert model steps
+## Converting models
+
+### New process using Polycam
+
+1. Scan with the "photo" mode in Polycam
+1. Use settings Detail = full and Use Object Masking = on.
+1. Use the crop tool to crop out the table/floor under the dessert
+1. Export as gltf and AirDrop it to the computer, but it really exports as glb
+1. Convert to gltf and compress: `gltf-pipeline -i path-to-glb.glb -o path-to-gltf.gltf -d`
+1. If the file size is too large (>900 KB ish) compress the textures:
+   1. `gltf-pipeline -i path-to-glb.glb -o output.gltf --separate`
+   1. Compress the separate JPG files but keep them the same dimensions
+   1. `gltf-pipeline -i path-to-gltf.gltf -o path-to-gltf.gltf -d`
+
+### Old process using Qclone/Blender
 
 1. Scan in Qclone
 1. Export obj

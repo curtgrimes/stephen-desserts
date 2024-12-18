@@ -1,0 +1,118 @@
+import { Dessert } from "interfaces";
+
+export default [
+  {
+    name: "Lemon Crinkle Cookies",
+    slug: "lemon-crinkle-cookies",
+    description: "",
+    model: {
+      path: "/static/models/2024/lemon-crinkle-cookies.gltf",
+      scale: 22,
+      rotation: {
+        x: 0,
+        y: 0,
+        z: 0,
+      },
+      allowedUserRotation: "horizontal-only",
+    },
+    refrigerationRecommended: false,
+    stephensFavorite: false,
+    curtsFavorite: false,
+    recipe: ``,
+  },
+  {
+    name: "Peanut Butter Snickerdoodles",
+    slug: "peanut-butter-snickerdoodles",
+    description: "",
+    model: {
+      path: "/static/models/2024/peanut-butter-snickerdoodles.gltf",
+      scale: 22,
+      rotation: {
+        x: 0,
+        y: 0,
+        z: 0,
+      },
+      allowedUserRotation: "horizontal-only",
+    },
+    refrigerationRecommended: false,
+    stephensFavorite: false,
+    curtsFavorite: false,
+    recipe: ``,
+  },
+  {
+    name: "Almond Butter Coconut Macaroons",
+    slug: "almond-butter-coconut-macaroons",
+    description: "",
+    model: {
+      path: "/static/models/2024/almond-butter-coconut-macaroons.gltf",
+      scale: 14,
+      rotation: {
+        x: 0,
+        y: 0,
+        z: 0,
+      },
+      allowedUserRotation: "horizontal-only",
+    },
+    refrigerationRecommended: false,
+    stephensFavorite: false,
+    curtsFavorite: false,
+    recipe: ``,
+  },
+  {
+    name: "Peppermint White Chocolate Cookies",
+    slug: "peppermint-white-chocolate-cookies",
+    description: "",
+    model: {
+      path: "/static/models/2024/peppermint-white-chocolate-cookies.gltf",
+      scale: 19,
+      rotation: {
+        x: 0,
+        y: 0,
+        z: 0,
+      },
+      allowedUserRotation: "horizontal-only",
+    },
+    refrigerationRecommended: false,
+    stephensFavorite: false,
+    curtsFavorite: false,
+    recipe: ``,
+  },
+  {
+    name: "Pistachio Drop Cookies",
+    slug: "pistachio-drop-cookies",
+    description: "",
+    model: {
+      path: "/static/models/2024/pistachio-drop-cookies.gltf",
+      scale: 16,
+      rotation: {
+        x: 0,
+        y: 0,
+        z: 0,
+      },
+      allowedUserRotation: "horizontal-only",
+    },
+    refrigerationRecommended: false,
+    stephensFavorite: false,
+    curtsFavorite: false,
+    recipe: ``,
+  },
+  {
+    name: "Chocolate Chili Cookies",
+    slug: "chocolate-chili-cookies",
+    description: "",
+    model: {
+      path: "/static/models/2024/pistachio-drop-cookies.gltf",
+      scale: 16,
+      rotation: {
+        x: 0,
+        y: 0,
+        z: 0,
+      },
+      allowedUserRotation: "horizontal-only",
+    },
+    refrigerationRecommended: false,
+    stephensFavorite: false,
+    curtsFavorite: false,
+    recipe: ``,
+  },
+] as Dessert[];

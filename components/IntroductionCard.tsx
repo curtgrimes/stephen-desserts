@@ -14,7 +14,7 @@ export default function IntroductionCard({ onNavigateToFirstDessert, year }) {
   return (
     <div className="mb-10 flex w-full flex-col items-center justify-center">
       <div className="relative flex h-full w-full flex-col items-center justify-center rounded-3xl bg-amber-800/10 p-10 text-center shadow-inner">
-        {year === "2023" ? (
+        {year === "2024" ? (
           <>
             <p className="text-xs font-black uppercase tracking-veryWide">
               December {year}
@@ -53,7 +53,7 @@ export default function IntroductionCard({ onNavigateToFirstDessert, year }) {
           <>
             <h1 className="mb-20">Stephen&apos;s Desserts from {year}</h1>
             <Link
-              href="/2023/peanut-butter-balls"
+              href="/2024/lemon-crinkle-cookies"
               className="button flex items-center gap-1 p-2 text-sm"
             >
               <FaChevronLeft />

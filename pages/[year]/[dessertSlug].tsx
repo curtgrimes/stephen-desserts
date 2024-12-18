@@ -11,7 +11,7 @@ export default function DessertPage() {
         <title>
           {dessert
             ? `${dessert.name} - Stephen's Desserts`
-            : "Stephen's Desserts - December 2023"}
+            : "Stephen's Desserts - December 2024"}
         </title>
       </Head>
     </div>

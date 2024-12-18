@@ -6,7 +6,7 @@ export default function YearPage() {
 
   useEffect(() => {
     // Redirect
-    router.push(`/2023/about`);
+    router.push(`/2024/about`);
   });
 
   return null;
