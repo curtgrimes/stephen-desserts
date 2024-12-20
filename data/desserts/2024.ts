@@ -8,7 +8,7 @@ export default [
       "Lemon lovers, rejoice! These tangy, melt-in-your-mouth treasures are as bright and joyful as Christmas morning. Dusted in powdered sugar like freshly fallen snow, they might just make you believe every citrusy bite was kissed by a holiday miracle.",
     model: {
       path: "/static/models/2024/lemon-crinkle-cookies.gltf",
-      scale: 22,
+      scale: 17,
       rotation: {
         x: 0,
         y: 0,
@@ -121,7 +121,7 @@ export default [
     },
     refrigerationRecommended: true,
     stephensFavorite: false,
-    curtsFavorite: false,
+    curtsFavorite: true,
     recipe: `
 ## Ingredients
 
@@ -165,7 +165,7 @@ export default [
     },
     refrigerationRecommended: false,
     stephensFavorite: false,
-    curtsFavorite: false,
+    curtsFavorite: true,
     recipe: `
 ## Ingredients
 
@@ -259,7 +259,7 @@ export default [
     description:
       "Heat up your holiday with a touch of the unexpected! These chocolaty cookies have a sneaky kick—just a little spicy, a little sweet, and full of holiday magic. Perfect for anyone who believes the best presents have surprises inside.",
     model: {
-      path: "/static/models/2024/pistachio-drop-cookies.gltf",
+      path: "/static/models/2024/chocolate-chili-cookies.gltf",
       scale: 16,
       rotation: {
         x: 0,
