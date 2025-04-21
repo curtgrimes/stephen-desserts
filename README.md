@@ -1,6 +1,10 @@
-# Stephen Desserts
+# Stephen 3D Desserts App
+
+**Demo: https://desserts.stephenfuchs.net**
 
 This Next.js project shows swipeable cards with 3D dessert renders and recipes.
+
+
 
 ## Development
 
