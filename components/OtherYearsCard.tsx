@@ -27,7 +27,7 @@ export default function IntroductionCard() {
 
   return (
     <div className="mb-10 flex w-full flex-col items-center justify-center gap-8">
-      {years.map(year => <ViewYearButton year={year} />)}
+      {years.map(year => <ViewYearButton year={year} key={year} />)}
     </div>
   );
 }
