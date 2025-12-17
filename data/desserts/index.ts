@@ -2,9 +2,10 @@ import desserts2021 from "./2021";
 import desserts2022 from "./2022";
 import desserts2023 from "./2023";
 import desserts2024 from "./2024";
+import desserts2025 from "./2025";
 
 const desserts = {
-  currentYear: 2024,
+  currentYear: 2025,
   years: {
     2021: {
       desserts: desserts2021,
@@ -17,6 +18,9 @@ const desserts = {
     },
     2024: {
       desserts: desserts2024,
+    },
+    2025: {
+      desserts: desserts2025,
     },
   },
 };
