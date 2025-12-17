@@ -10,6 +10,7 @@ import {
 } from "react-icons/fa";
 import { useIntersectionObserverRef } from "rooks";
 import Note from "./Note";
+import { useDesserts } from "hooks/useDesserts";
 
 export default function DessertDescription({
   dessert,
@@ -23,6 +24,7 @@ export default function DessertDescription({
   isLast: boolean;
 }) {
   const router = useRouter();
+  const { currentYear } = useDesserts();
   const descriptionElementRef = useRef<HTMLDivElement>(undefined);
   const [isVisible, setIsVisible] = useState(false);
   const [visibilityRef] = useIntersectionObserverRef((entries) => {
@@ -44,7 +46,7 @@ export default function DessertDescription({
       style={{ overscrollBehaviorY: "none" }}
     >
       <div className="overflow-y-auto" ref={visibilityRef}>
-        <h1>{dessert.name} {router.query.year !== '2024' && `(${router.query.year})`}</h1>
+        <h1>{dessert.name} {Number(router.query.year) !== currentYear && `(${router.query.year})`}</h1>
         <p>{dessert.description}</p>
 
         {dessert.refrigerationRecommended && (

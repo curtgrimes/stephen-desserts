@@ -1,3 +1,4 @@
+import { useDesserts } from "hooks/useDesserts";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import {
@@ -10,11 +11,13 @@ import { WiSnowflakeCold as SnowflakeIcon } from "react-icons/wi";
 
 export default function IntroductionCard({ onNavigateToFirstDessert, year }) {
   const router = useRouter();
+  const { currentYear, desserts } = useDesserts(year);
+  const { desserts: currentYearDesserts } = useDesserts(String(currentYear));
 
   return (
     <div className="mb-10 flex w-full flex-col items-center justify-center">
       <div className="relative flex h-full w-full flex-col items-center justify-center rounded-3xl bg-amber-800/10 p-10 text-center shadow-inner">
-        {year === "2024" ? (
+        {Number(year) === currentYear ? (
           <>
             <p className="text-xs font-black uppercase tracking-veryWide">
               December {year}
@@ -53,7 +56,7 @@ export default function IntroductionCard({ onNavigateToFirstDessert, year }) {
           <>
             <h1 className="mb-20">Stephen&apos;s Desserts from {year}</h1>
             <Link
-              href="/2024/lemon-crinkle-cookies"
+              href={`/${currentYear}/${currentYearDesserts[0]?.slug}`}
               className="button flex items-center gap-1 p-2 text-sm"
             >
               <FaChevronLeft />
