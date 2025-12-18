@@ -8,7 +8,7 @@ export default [
       "Sparkling with holiday cheer, these soft and festive sugar cookies are sprinkled with rainbow-colored joy, reminiscent of twinkling Christmas lights on a snowy evening. Every bite brings a sweet, buttery warmth perfect for a cozy winter day.",
     model: {
       path: "/static/models/2025/drop-style-sugar-cookies/drop-style-sugar-cookies.gltf",
-      scale: 25,
+      scale: 28,
       rotation: {
         x: 0,
         y: 0,
@@ -107,7 +107,7 @@ export default [
       "Buttery, lightly sweet, and frosted with peppermint cream, these meltaways evoke the crisp, refreshing flavor of candy canes. Each bite carries the festive spirit of the season, like walking through a brightly lit winter village.",
     model: {
       path: "/static/models/2025/peppermint-meltaway-cookies/peppermint-meltaway-cookies.gltf",
-      scale: 24,
+      scale: 26,
       rotation: {
         x: 0,
         y: 0,
@@ -166,7 +166,7 @@ export default [
       "Rich, spiced, and warmly sweet, these molasses cookies are infused with cinnamon, ginger, and cloves. Every bite conjures the cozy scents of Christmas spices and wintertime warmth.",
     model: {
       path: "/static/models/2025/molasses-cookies/molasses-cookies.gltf",
-      scale: 24,
+      scale: 26,
       rotation: {
         x: 0,
         y: 0,
@@ -259,12 +259,13 @@ export default [
       "Soft and chewy with plump raisins and a comforting cinnamon spice, these cookies are like cozying up by a crackling fire on a cold, snowy evening, each bite warming you from the inside out.",
     model: {
       path: "/static/models/2025/oatmeal-raisin-cookies/oatmeal-raisin-cookies.gltf",
-      scale: 33,
+      scale: 35,
       rotation: {
         x: 0,
         y: 0,
         z: 0,
       },
+      cameraYPosition: 0,
       allowedUserRotation: "horizontal-only",
     },
     refrigerationRecommended: false,
