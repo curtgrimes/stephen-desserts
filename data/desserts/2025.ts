@@ -7,13 +7,14 @@ export default [
     description:
       "Sparkling with holiday cheer, these soft and festive sugar cookies are sprinkled with rainbow-colored joy, reminiscent of twinkling Christmas lights on a snowy evening. Every bite brings a sweet, buttery warmth perfect for a cozy winter day.",
     model: {
-      path: "/static/models/2024/lemon-crinkle-cookies.gltf",
-      scale: 17,
+      path: "/static/models/2025/drop-style-sugar-cookies/drop-style-sugar-cookies.gltf",
+      scale: 25,
       rotation: {
         x: 0,
         y: 0,
         z: 0,
       },
+      cameraYPosition: -0.25,
       allowedUserRotation: "horizontal-only",
     },
     refrigerationRecommended: false,
@@ -45,13 +46,13 @@ export default [
     `,
   },
   {
-    name: "Orange Chocolate Chip Ricotta Cookies ",
+    name: "Orange Chocolate Chip Ricotta Cookies",
     slug: "orange-chocolate-chip-ricotta-cookies",
     description:
       "Soft and tender with gentle bursts of orange and chocolate, these cookies capture the delight of a quiet Christmas morning, each bite carrying a subtle sweetness that warms the heart and brightens the holiday spirit.",
     model: {
-      path: "/static/models/2024/peanut-butter-snickerdoodles.gltf",
-      scale: 22,
+      path: "/static/models/2025/orange-chocolate-chip-ricotta-cookies/orange-chocolate-chip-ricotta-cookies.gltf",
+      scale: 33,
       rotation: {
         x: 0,
         y: 0,
@@ -61,7 +62,7 @@ export default [
     },
     refrigerationRecommended: true,
     stephensFavorite: false,
-    curtsFavorite: false,
+    curtsFavorite: true,
     recipe: `
 ## Ingredients
 
@@ -74,13 +75,13 @@ export default [
 **1 &frac12; cups** (300g) granulated sugar  
 **2** large eggs, at room temperature  
 **10 oz** (283g) full-fat ricotta cheese, at room temperature (around 1 and 1/4 cups)    
-**1 &frac12; Tbsp** (135g) fresh orange zest  
+**1 &frac12; Tbsp** fresh orange zest  
 **1 Tbsp** fresh orange juice  
-**&frac12; tsp** (110g) vanilla extract  
+**&frac12; tsp** vanilla extract  
 **1 cup** (180g) mini chocolate chips  
 
 **Icing:**  
-**1 &frac12; cups** confectioners’ sugar, sifted  
+**1 &frac12; cups** (180g) confectioners’ sugar, sifted  
 **3-4 Tbsp** fresh orange juice
 
 ## Directions
@@ -103,10 +104,10 @@ export default [
     name: "Peppermint Meltaway Cookies",
     slug: "peppermint-meltaway-cookies",
     description:
-      "Buttery, lightly sweet, and frosted with peppermint cream, these meltaways evoke the crisp, refreshing flavor of candy canes. Each bite carries the festive spirit of the season, like walking through a brighty lit winter village.",
+      "Buttery, lightly sweet, and frosted with peppermint cream, these meltaways evoke the crisp, refreshing flavor of candy canes. Each bite carries the festive spirit of the season, like walking through a brightly lit winter village.",
     model: {
-      path: "/static/models/2024/almond-butter-coconut-macaroons.gltf",
-      scale: 14,
+      path: "/static/models/2025/peppermint-meltaway-cookies/peppermint-meltaway-cookies.gltf",
+      scale: 24,
       rotation: {
         x: 0,
         y: 0,
@@ -164,18 +165,19 @@ export default [
     description:
       "Rich, spiced, and warmly sweet, these molasses cookies are infused with cinnamon, ginger, and cloves. Every bite conjures the cozy scents of Christmas spices and wintertime warmth.",
     model: {
-      path: "/static/models/2024/peppermint-white-chocolate-cookies.gltf",
-      scale: 19,
+      path: "/static/models/2025/molasses-cookies/molasses-cookies.gltf",
+      scale: 24,
       rotation: {
         x: 0,
         y: 0,
         z: 0,
       },
+      cameraYPosition: -0.5,
       allowedUserRotation: "horizontal-only",
     },
     refrigerationRecommended: false,
     stephensFavorite: false,
-    curtsFavorite: false,
+    curtsFavorite: true,
     recipe: `
 ## Ingredients
 
@@ -215,13 +217,14 @@ export default [
     description:
       "Crispy, lightly sweet, and dotted with chocolate, these rice krispie balls are filled with festive cheer. Their playful crunch and nutty peanut butter flavor make them a fun, holiday treat for any celebration.",
     model: {
-      path: "/static/models/2024/pistachio-drop-cookies.gltf",
-      scale: 16,
+      path: "/static/models/2025/peanut-butter-rice-krispie-balls/peanut-butter-rice-krispie-balls.gltf",
+      scale: 22,
       rotation: {
         x: 0,
         y: 0,
         z: 0,
       },
+      cameraYPosition: 1.75,
       allowedUserRotation: "horizontal-only",
     },
     refrigerationRecommended: false,
@@ -235,14 +238,14 @@ export default [
 **10 oz** bag marshmallows  
 **&frac12; tsp** vanilla extract  
 **6 cups** rice krispies cereal  
-**&frac34; cup** milk chocolate or semi sweet chocolate chips 
+**&frac34; cup** milk chocolate or semi-sweet chocolate chips 
 
 ## Directions
 
-1. Place a large non stick pot (at least 6 quart) over medium heat. Add the butter and melt completely. Add the peanut butter and stir until softened and fully combined.  
+1. Place a large non-stick pot (at least 6 quart) over medium heat. Add the butter and melt completely. Add the peanut butter and stir until softened and fully combined.  
 2. Add the marshmallows and vanilla extract. Stir gently with a rubber spatula until the marshmallows are melted and the mixture is smooth.  
 3. Remove from heat. Add the rice krispies cereal and gently fold until evenly coated.  
-4. Bring the warm rice krispie mixture over to a work surface. Carefully roll into small two bite size balls, gently compressing as you roll.  
+4. Bring the warm rice krispie mixture over to a work surface. Carefully roll into small two bite-sized balls, gently compressing as you roll.  
 5. Place the balls onto a large sheet of parchment or tinfoil. Set aside.  
 6. To melt the chocolate, add the chocolate chips to a bowl set over a pot of simmering water (double-boiler method) or in the microwave in 30 second intervals, stirring after each until smooth.  
 7. Dip the tops of each rice krispie ball into the melted chocolate and return to the parchment or tinfoil lined surface.  
@@ -255,8 +258,8 @@ export default [
     description:
       "Soft and chewy with plump raisins and a comforting cinnamon spice, these cookies are like cozying up by a crackling fire on a cold, snowy evening, each bite warming you from the inside out.",
     model: {
-      path: "/static/models/2024/chocolate-chili-cookies.gltf",
-      scale: 16,
+      path: "/static/models/2025/oatmeal-raisin-cookies/oatmeal-raisin-cookies.gltf",
+      scale: 33,
       rotation: {
         x: 0,
         y: 0,

@@ -7,6 +7,7 @@ interface DessertModel {
   path: string;
   scale: number;
   rotation: xyz;
+  cameraYPosition?: number;
   allowedUserRotation?: "horizontal-only" | "horizontal-and-vertical";
 }
 export interface Dessert {

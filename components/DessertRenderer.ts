@@ -103,7 +103,7 @@ export class DessertRenderer {
 
   private initializeControls() {
     this.controls = new OrbitControls(this.camera, this.renderer.domElement);
-    this.controls.target.set(0, 0.25, 0);
+    this.controls.target.set(0, this.dessert.model.cameraYPosition || 0.25, 0);
     this.controls.update();
     this.controls.enableRotate = true;
     this.controls.enablePan = false;
