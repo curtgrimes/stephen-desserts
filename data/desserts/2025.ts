@@ -8,7 +8,7 @@ export default [
       "Sparkling with holiday cheer, these soft and festive sugar cookies are sprinkled with rainbow-colored joy, reminiscent of twinkling Christmas lights on a snowy evening. Every bite brings a sweet, buttery warmth perfect for a cozy winter day.",
     model: {
       path: "/static/models/2025/drop-style-sugar-cookies/drop-style-sugar-cookies.gltf",
-      scale: 28,
+      scale: 25,
       rotation: {
         x: 0,
         y: 0,
